@@ -1024,7 +1024,7 @@ def monthly_heatmap(
     _plt.xticks(rotation=0, fontsize=annot_size * 1.2)
     _plt.yticks(rotation=0, fontsize=annot_size * 1.2)
 
-    plt.grid(False)
+    _plt.grid(False)
 
     try:
         _plt.subplots_adjust(hspace=0, bottom=0, top=1)
