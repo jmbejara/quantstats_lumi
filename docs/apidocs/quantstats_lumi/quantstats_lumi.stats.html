@@ -1,0 +1,1556 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>quantstats_lumi.stats &#8212; QuantStats Lumi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=0ce46f78"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'apidocs/quantstats_lumi/quantstats_lumi.stats';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="quantstats_lumi.reports" href="quantstats_lumi.reports.html" />
+    <link rel="prev" title="quantstats_lumi.utils" href="quantstats_lumi.utils.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="QuantStats Lumi - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="QuantStats Lumi - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    QuantStats Lumi
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Change Log</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="quantstats_lumi.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="quantstats_lumi._plotting.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi._plotting</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="quantstats_lumi._plotting.core.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi._plotting.core</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="quantstats_lumi._plotting.wrappers.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi._plotting.wrappers</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="quantstats_lumi.version.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantstats_lumi.plots.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.plots</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantstats_lumi.utils.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.utils</span></code></a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.stats</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantstats_lumi.reports.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.reports</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../myst_markdown_demos.html">MyST Markdown Demos</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jmbejara/blank_project" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jmbejara/blank_project/issues/new?title=Issue%20on%20page%20%2Fapidocs/quantstats_lumi/quantstats_lumi.stats.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/apidocs/quantstats_lumi/quantstats_lumi.stats.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>quantstats_lumi.stats</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.pct_rank"><code class="docutils literal notranslate"><span class="pre">pct_rank()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.compsum"><code class="docutils literal notranslate"><span class="pre">compsum()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.comp"><code class="docutils literal notranslate"><span class="pre">comp()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.distribution"><code class="docutils literal notranslate"><span class="pre">distribution()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.expected_return"><code class="docutils literal notranslate"><span class="pre">expected_return()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.geometric_mean"><code class="docutils literal notranslate"><span class="pre">geometric_mean()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.ghpr"><code class="docutils literal notranslate"><span class="pre">ghpr()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.outliers"><code class="docutils literal notranslate"><span class="pre">outliers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.remove_outliers"><code class="docutils literal notranslate"><span class="pre">remove_outliers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.best"><code class="docutils literal notranslate"><span class="pre">best()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.worst"><code class="docutils literal notranslate"><span class="pre">worst()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.consecutive_wins"><code class="docutils literal notranslate"><span class="pre">consecutive_wins()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.consecutive_losses"><code class="docutils literal notranslate"><span class="pre">consecutive_losses()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.exposure"><code class="docutils literal notranslate"><span class="pre">exposure()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.win_rate"><code class="docutils literal notranslate"><span class="pre">win_rate()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.avg_return"><code class="docutils literal notranslate"><span class="pre">avg_return()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.avg_win"><code class="docutils literal notranslate"><span class="pre">avg_win()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.avg_loss"><code class="docutils literal notranslate"><span class="pre">avg_loss()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.volatility"><code class="docutils literal notranslate"><span class="pre">volatility()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.rolling_volatility"><code class="docutils literal notranslate"><span class="pre">rolling_volatility()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.implied_volatility"><code class="docutils literal notranslate"><span class="pre">implied_volatility()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.autocorr_penalty"><code class="docutils literal notranslate"><span class="pre">autocorr_penalty()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.sharpe"><code class="docutils literal notranslate"><span class="pre">sharpe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.smart_sharpe"><code class="docutils literal notranslate"><span class="pre">smart_sharpe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.rolling_sharpe"><code class="docutils literal notranslate"><span class="pre">rolling_sharpe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.sortino"><code class="docutils literal notranslate"><span class="pre">sortino()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.smart_sortino"><code class="docutils literal notranslate"><span class="pre">smart_sortino()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.rolling_sortino"><code class="docutils literal notranslate"><span class="pre">rolling_sortino()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.adjusted_sortino"><code class="docutils literal notranslate"><span class="pre">adjusted_sortino()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.probabilistic_ratio"><code class="docutils literal notranslate"><span class="pre">probabilistic_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.probabilistic_sharpe_ratio"><code class="docutils literal notranslate"><span class="pre">probabilistic_sharpe_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.probabilistic_sortino_ratio"><code class="docutils literal notranslate"><span class="pre">probabilistic_sortino_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.probabilistic_adjusted_sortino_ratio"><code class="docutils literal notranslate"><span class="pre">probabilistic_adjusted_sortino_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.treynor_ratio"><code class="docutils literal notranslate"><span class="pre">treynor_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.omega"><code class="docutils literal notranslate"><span class="pre">omega()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.gain_to_pain_ratio"><code class="docutils literal notranslate"><span class="pre">gain_to_pain_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.cagr"><code class="docutils literal notranslate"><span class="pre">cagr()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.rar"><code class="docutils literal notranslate"><span class="pre">rar()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.skew"><code class="docutils literal notranslate"><span class="pre">skew()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.kurtosis"><code class="docutils literal notranslate"><span class="pre">kurtosis()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.calmar"><code class="docutils literal notranslate"><span class="pre">calmar()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.ulcer_index"><code class="docutils literal notranslate"><span class="pre">ulcer_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.ulcer_performance_index"><code class="docutils literal notranslate"><span class="pre">ulcer_performance_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.upi"><code class="docutils literal notranslate"><span class="pre">upi()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.serenity_index"><code class="docutils literal notranslate"><span class="pre">serenity_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.risk_of_ruin"><code class="docutils literal notranslate"><span class="pre">risk_of_ruin()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.ror"><code class="docutils literal notranslate"><span class="pre">ror()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.value_at_risk"><code class="docutils literal notranslate"><span class="pre">value_at_risk()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.var"><code class="docutils literal notranslate"><span class="pre">var()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.conditional_value_at_risk"><code class="docutils literal notranslate"><span class="pre">conditional_value_at_risk()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.cvar"><code class="docutils literal notranslate"><span class="pre">cvar()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.expected_shortfall"><code class="docutils literal notranslate"><span class="pre">expected_shortfall()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.tail_ratio"><code class="docutils literal notranslate"><span class="pre">tail_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.payoff_ratio"><code class="docutils literal notranslate"><span class="pre">payoff_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.win_loss_ratio"><code class="docutils literal notranslate"><span class="pre">win_loss_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.profit_ratio"><code class="docutils literal notranslate"><span class="pre">profit_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.profit_factor"><code class="docutils literal notranslate"><span class="pre">profit_factor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.cpc_index"><code class="docutils literal notranslate"><span class="pre">cpc_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.common_sense_ratio"><code class="docutils literal notranslate"><span class="pre">common_sense_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.outlier_win_ratio"><code class="docutils literal notranslate"><span class="pre">outlier_win_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.outlier_loss_ratio"><code class="docutils literal notranslate"><span class="pre">outlier_loss_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.recovery_factor"><code class="docutils literal notranslate"><span class="pre">recovery_factor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.risk_return_ratio"><code class="docutils literal notranslate"><span class="pre">risk_return_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.max_drawdown"><code class="docutils literal notranslate"><span class="pre">max_drawdown()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.to_drawdown_series"><code class="docutils literal notranslate"><span class="pre">to_drawdown_series()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.drawdown_details"><code class="docutils literal notranslate"><span class="pre">drawdown_details()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.kelly_criterion"><code class="docutils literal notranslate"><span class="pre">kelly_criterion()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.benchmark_correlation"><code class="docutils literal notranslate"><span class="pre">benchmark_correlation()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.r_squared"><code class="docutils literal notranslate"><span class="pre">r_squared()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.r2"><code class="docutils literal notranslate"><span class="pre">r2()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.information_ratio"><code class="docutils literal notranslate"><span class="pre">information_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.greeks"><code class="docutils literal notranslate"><span class="pre">greeks()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.rolling_greeks"><code class="docutils literal notranslate"><span class="pre">rolling_greeks()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.compare"><code class="docutils literal notranslate"><span class="pre">compare()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.monthly_returns"><code class="docutils literal notranslate"><span class="pre">monthly_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.romad"><code class="docutils literal notranslate"><span class="pre">romad()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="module-quantstats_lumi.stats">
+<span id="quantstats-lumi-stats"></span><h1><a class="reference internal" href="#module-quantstats_lumi.stats" title="quantstats_lumi.stats"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.stats</span></code></a><a class="headerlink" href="#module-quantstats_lumi.stats" title="Link to this heading">#</a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table table-left">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.pct_rank" title="quantstats_lumi.stats.pct_rank"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pct_rank</span></code></a></p></td>
+<td><p>Rank prices by window</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.compsum" title="quantstats_lumi.stats.compsum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compsum</span></code></a></p></td>
+<td><p>Calculates rolling compounded returns</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.comp" title="quantstats_lumi.stats.comp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">comp</span></code></a></p></td>
+<td><p>Calculates total compounded returns</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.distribution" title="quantstats_lumi.stats.distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">distribution</span></code></a></p></td>
+<td><p>Returns the distribution of returns
+Args:
+* returns (Series, DataFrame): Input return series
+* compounded (bool): Calculate compounded returns?</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.expected_return" title="quantstats_lumi.stats.expected_return"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expected_return</span></code></a></p></td>
+<td><p>Returns the expected return for a given period
+by calculating the geometric holding period return</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.geometric_mean" title="quantstats_lumi.stats.geometric_mean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geometric_mean</span></code></a></p></td>
+<td><p>Shorthand for expected_return()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.ghpr" title="quantstats_lumi.stats.ghpr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ghpr</span></code></a></p></td>
+<td><p>Shorthand for expected_return()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.outliers" title="quantstats_lumi.stats.outliers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outliers</span></code></a></p></td>
+<td><p>Returns series of outliers</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.remove_outliers" title="quantstats_lumi.stats.remove_outliers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_outliers</span></code></a></p></td>
+<td><p>Returns series of returns without the outliers</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.best" title="quantstats_lumi.stats.best"><code class="xref py py-obj docutils literal notranslate"><span class="pre">best</span></code></a></p></td>
+<td><p>Returns the best day/month/week/quarter/year’s return</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.worst" title="quantstats_lumi.stats.worst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">worst</span></code></a></p></td>
+<td><p>Returns the worst day/month/week/quarter/year’s return</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.consecutive_wins" title="quantstats_lumi.stats.consecutive_wins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">consecutive_wins</span></code></a></p></td>
+<td><p>Returns the maximum consecutive wins by day/month/week/quarter/year</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.consecutive_losses" title="quantstats_lumi.stats.consecutive_losses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">consecutive_losses</span></code></a></p></td>
+<td><p>Returns the maximum consecutive losses by
+day/month/week/quarter/year</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.exposure" title="quantstats_lumi.stats.exposure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exposure</span></code></a></p></td>
+<td><p>Returns the market exposure time (returns != 0)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.win_rate" title="quantstats_lumi.stats.win_rate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">win_rate</span></code></a></p></td>
+<td><p>Calculates the win ratio for a period</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.avg_return" title="quantstats_lumi.stats.avg_return"><code class="xref py py-obj docutils literal notranslate"><span class="pre">avg_return</span></code></a></p></td>
+<td><p>Calculates the average return/trade return for a period</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.avg_win" title="quantstats_lumi.stats.avg_win"><code class="xref py py-obj docutils literal notranslate"><span class="pre">avg_win</span></code></a></p></td>
+<td><p>Calculates the average winning
+return/trade return for a period</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.avg_loss" title="quantstats_lumi.stats.avg_loss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">avg_loss</span></code></a></p></td>
+<td><p>Calculates the average low if
+return/trade return for a period</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.volatility" title="quantstats_lumi.stats.volatility"><code class="xref py py-obj docutils literal notranslate"><span class="pre">volatility</span></code></a></p></td>
+<td><p>Calculates the volatility of returns for a period</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.rolling_volatility" title="quantstats_lumi.stats.rolling_volatility"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_volatility</span></code></a></p></td>
+<td><p>Calculates the rolling volatility of returns for a period
+Args:
+* returns (Series, DataFrame): Input return series
+* rolling_period (int): Rolling period
+* periods_per_year: periods per year</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.implied_volatility" title="quantstats_lumi.stats.implied_volatility"><code class="xref py py-obj docutils literal notranslate"><span class="pre">implied_volatility</span></code></a></p></td>
+<td><p>Calculates the implied volatility of returns for a period</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.autocorr_penalty" title="quantstats_lumi.stats.autocorr_penalty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">autocorr_penalty</span></code></a></p></td>
+<td><p>Metric to account for auto correlation</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.sharpe" title="quantstats_lumi.stats.sharpe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sharpe</span></code></a></p></td>
+<td><p>Calculate risk-adjusted return ratio</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.smart_sharpe" title="quantstats_lumi.stats.smart_sharpe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smart_sharpe</span></code></a></p></td>
+<td><p>Calculates the smart sharpe ratio
+Args:
+* returns (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.rolling_sharpe" title="quantstats_lumi.stats.rolling_sharpe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_sharpe</span></code></a></p></td>
+<td><p>Calculates the rolling sharpe ratio
+Args:
+* returns (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* rolling_period (int): Rolling period
+* annualize: return annualize sharpe?
+* periods_per_year: periods per year</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.sortino" title="quantstats_lumi.stats.sortino"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sortino</span></code></a></p></td>
+<td><p>Calculates the sortino ratio of access returns</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.smart_sortino" title="quantstats_lumi.stats.smart_sortino"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smart_sortino</span></code></a></p></td>
+<td><p>Calculates the smart sortino ratio
+Args:
+* returns (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.rolling_sortino" title="quantstats_lumi.stats.rolling_sortino"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_sortino</span></code></a></p></td>
+<td><p>Calculates the rolling sortino ratio
+Args:
+* returns (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* rolling_period (int): Rolling period
+* annualize: return annualize sharpe?
+* periods_per_year: periods per year</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.adjusted_sortino" title="quantstats_lumi.stats.adjusted_sortino"><code class="xref py py-obj docutils literal notranslate"><span class="pre">adjusted_sortino</span></code></a></p></td>
+<td><p>Jack Schwager’s version of the Sortino ratio allows for
+direct comparisons to the Sharpe. See here for more info:
+<a class="reference external" href="https://archive.is/wip/2rwFW">https://archive.is/wip/2rwFW</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.probabilistic_ratio" title="quantstats_lumi.stats.probabilistic_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probabilistic_ratio</span></code></a></p></td>
+<td><p>Calculates the probabilistic sharpe ratio
+Args:
+* series (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?
+* smart: return smart sharpe ratio</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.probabilistic_sharpe_ratio" title="quantstats_lumi.stats.probabilistic_sharpe_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probabilistic_sharpe_ratio</span></code></a></p></td>
+<td><p>Calculates the probabilistic sharpe ratio
+Args:
+* series (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?
+* smart: return smart sharpe ratio</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.probabilistic_sortino_ratio" title="quantstats_lumi.stats.probabilistic_sortino_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probabilistic_sortino_ratio</span></code></a></p></td>
+<td><p>Calculates the probabilistic sortino ratio
+Args:
+* series (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?
+* smart: return smart sharpe ratio</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.probabilistic_adjusted_sortino_ratio" title="quantstats_lumi.stats.probabilistic_adjusted_sortino_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probabilistic_adjusted_sortino_ratio</span></code></a></p></td>
+<td><p>Calculates the probabilistic adjusted sortino ratio</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.treynor_ratio" title="quantstats_lumi.stats.treynor_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">treynor_ratio</span></code></a></p></td>
+<td><p>Calculates the Treynor ratio</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.omega" title="quantstats_lumi.stats.omega"><code class="xref py py-obj docutils literal notranslate"><span class="pre">omega</span></code></a></p></td>
+<td><p>Determines the Omega ratio of a strategy.
+See <a class="reference external" href="https://en.wikipedia.org/wiki/Omega_ratio">https://en.wikipedia.org/wiki/Omega_ratio</a> for more details.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.gain_to_pain_ratio" title="quantstats_lumi.stats.gain_to_pain_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gain_to_pain_ratio</span></code></a></p></td>
+<td><p>Jack Schwager’s GPR. See here for more info:
+<a class="reference external" href="https://archive.is/wip/2rwFW">https://archive.is/wip/2rwFW</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.cagr" title="quantstats_lumi.stats.cagr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cagr</span></code></a></p></td>
+<td><p>Calculates the communicative annualized growth return
+(CAGR%) of access returns</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.rar" title="quantstats_lumi.stats.rar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rar</span></code></a></p></td>
+<td><p>Calculates the risk-adjusted return of access returns
+(CAGR / exposure. takes time into account.)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.skew" title="quantstats_lumi.stats.skew"><code class="xref py py-obj docutils literal notranslate"><span class="pre">skew</span></code></a></p></td>
+<td><p>Calculates returns’ skewness
+(the degree of asymmetry of a distribution around its mean)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.kurtosis" title="quantstats_lumi.stats.kurtosis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kurtosis</span></code></a></p></td>
+<td><p>Calculates returns’ kurtosis
+(the degree to which a distribution peak compared to a normal distribution)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.calmar" title="quantstats_lumi.stats.calmar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calmar</span></code></a></p></td>
+<td><p>Calculates the calmar ratio (CAGR% / MaxDD%)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.ulcer_index" title="quantstats_lumi.stats.ulcer_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ulcer_index</span></code></a></p></td>
+<td><p>Calculates the ulcer index score (downside risk measurment)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.ulcer_performance_index" title="quantstats_lumi.stats.ulcer_performance_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ulcer_performance_index</span></code></a></p></td>
+<td><p>Calculates the ulcer index score
+(downside risk measurment)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.upi" title="quantstats_lumi.stats.upi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">upi</span></code></a></p></td>
+<td><p>Shorthand for ulcer_performance_index()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.serenity_index" title="quantstats_lumi.stats.serenity_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">serenity_index</span></code></a></p></td>
+<td><p>Calculates the serenity index score
+(<a class="reference external" href="https://www.keyquant.com/Download/GetFile?Filename=%5CPublications%5CKeyQuant_WhitePaper_APT_Part1.pdf">https://www.keyquant.com/Download/GetFile?Filename=\Publications\KeyQuant_WhitePaper_APT_Part1.pdf</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.risk_of_ruin" title="quantstats_lumi.stats.risk_of_ruin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">risk_of_ruin</span></code></a></p></td>
+<td><p>Calculates the risk of ruin
+(the likelihood of losing all one’s investment capital)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.ror" title="quantstats_lumi.stats.ror"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ror</span></code></a></p></td>
+<td><p>Shorthand for risk_of_ruin()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.value_at_risk" title="quantstats_lumi.stats.value_at_risk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value_at_risk</span></code></a></p></td>
+<td><p>Calculats the daily value-at-risk
+(variance-covariance calculation with confidence n)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.var" title="quantstats_lumi.stats.var"><code class="xref py py-obj docutils literal notranslate"><span class="pre">var</span></code></a></p></td>
+<td><p>Shorthand for value_at_risk()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.conditional_value_at_risk" title="quantstats_lumi.stats.conditional_value_at_risk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">conditional_value_at_risk</span></code></a></p></td>
+<td><p>Calculats the conditional daily value-at-risk (aka expected shortfall)
+quantifies the amount of tail risk an investment</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.cvar" title="quantstats_lumi.stats.cvar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cvar</span></code></a></p></td>
+<td><p>Shorthand for conditional_value_at_risk()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.expected_shortfall" title="quantstats_lumi.stats.expected_shortfall"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expected_shortfall</span></code></a></p></td>
+<td><p>Shorthand for conditional_value_at_risk()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.tail_ratio" title="quantstats_lumi.stats.tail_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tail_ratio</span></code></a></p></td>
+<td><p>Measures the ratio between the right
+(95%) and left tail (5%).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.payoff_ratio" title="quantstats_lumi.stats.payoff_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payoff_ratio</span></code></a></p></td>
+<td><p>Measures the payoff ratio (average win/average loss)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.win_loss_ratio" title="quantstats_lumi.stats.win_loss_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">win_loss_ratio</span></code></a></p></td>
+<td><p>Shorthand for payoff_ratio()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.profit_ratio" title="quantstats_lumi.stats.profit_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">profit_ratio</span></code></a></p></td>
+<td><p>Measures the profit ratio (win ratio / loss ratio)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.profit_factor" title="quantstats_lumi.stats.profit_factor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">profit_factor</span></code></a></p></td>
+<td><p>Measures the profit ratio (wins/loss)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.cpc_index" title="quantstats_lumi.stats.cpc_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cpc_index</span></code></a></p></td>
+<td><p>Measures the cpc ratio
+(profit factor * win % * win loss ratio)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.common_sense_ratio" title="quantstats_lumi.stats.common_sense_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">common_sense_ratio</span></code></a></p></td>
+<td><p>Measures the common sense ratio (profit factor * tail ratio)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.outlier_win_ratio" title="quantstats_lumi.stats.outlier_win_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outlier_win_ratio</span></code></a></p></td>
+<td><p>Calculates the outlier winners ratio
+99th percentile of returns / mean positive return</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.outlier_loss_ratio" title="quantstats_lumi.stats.outlier_loss_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">outlier_loss_ratio</span></code></a></p></td>
+<td><p>Calculates the outlier losers ratio
+1st percentile of returns / mean negative return</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.recovery_factor" title="quantstats_lumi.stats.recovery_factor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">recovery_factor</span></code></a></p></td>
+<td><p>Measures how fast the strategy recovers from drawdowns</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.risk_return_ratio" title="quantstats_lumi.stats.risk_return_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">risk_return_ratio</span></code></a></p></td>
+<td><p>Calculates the return / risk ratio
+(sharpe ratio without factoring in the risk-free rate)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.max_drawdown" title="quantstats_lumi.stats.max_drawdown"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_drawdown</span></code></a></p></td>
+<td><p>Calculates the maximum drawdown</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.to_drawdown_series" title="quantstats_lumi.stats.to_drawdown_series"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_drawdown_series</span></code></a></p></td>
+<td><p>Convert returns series to drawdown series</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.drawdown_details" title="quantstats_lumi.stats.drawdown_details"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drawdown_details</span></code></a></p></td>
+<td><p>Calculates drawdown details, including start/end/valley dates,
+duration, max drawdown and max dd for 99% of the dd period
+for every drawdown period</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.kelly_criterion" title="quantstats_lumi.stats.kelly_criterion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kelly_criterion</span></code></a></p></td>
+<td><p>Calculates the recommended maximum amount of capital that
+should be allocated to the given strategy, based on the
+Kelly Criterion (<a class="reference external" href="http://en.wikipedia.org/wiki/Kelly_criterion">http://en.wikipedia.org/wiki/Kelly_criterion</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.benchmark_correlation" title="quantstats_lumi.stats.benchmark_correlation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">benchmark_correlation</span></code></a></p></td>
+<td><p>Calculates the correlation to the benchmark</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.r_squared" title="quantstats_lumi.stats.r_squared"><code class="xref py py-obj docutils literal notranslate"><span class="pre">r_squared</span></code></a></p></td>
+<td><p>Measures the straight line fit of the equity curve</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.r2" title="quantstats_lumi.stats.r2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">r2</span></code></a></p></td>
+<td><p>Shorthand for r_squared()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.information_ratio" title="quantstats_lumi.stats.information_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">information_ratio</span></code></a></p></td>
+<td><p>Calculates the information ratio
+(basically the risk return ratio of the net profits)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.greeks" title="quantstats_lumi.stats.greeks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">greeks</span></code></a></p></td>
+<td><p>Calculates alpha and beta of the portfolio</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.rolling_greeks" title="quantstats_lumi.stats.rolling_greeks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_greeks</span></code></a></p></td>
+<td><p>Calculates rolling alpha and beta of the portfolio</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.compare" title="quantstats_lumi.stats.compare"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compare</span></code></a></p></td>
+<td><p>Compare returns to benchmark on a
+day/week/month/quarter/year basis</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.stats.monthly_returns" title="quantstats_lumi.stats.monthly_returns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">monthly_returns</span></code></a></p></td>
+<td><p>Calculates monthly returns</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.stats.romad" title="quantstats_lumi.stats.romad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">romad</span></code></a></p></td>
+<td><p>Calculates the romad (return/cagr over max drawdown) of a strategy
+Args:
+* returns (Series, DataFrame): Input return series
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?
+* smart: return smart sharpe ratio</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="api">
+<h3>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.pct_rank">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">pct_rank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.pct_rank" title="Link to this definition">#</a></dt>
+<dd><p>Rank prices by window</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.compsum">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">compsum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.compsum" title="Link to this definition">#</a></dt>
+<dd><p>Calculates rolling compounded returns</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.comp">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">comp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.comp" title="Link to this definition">#</a></dt>
+<dd><p>Calculates total compounded returns</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.distribution">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.distribution" title="Link to this definition">#</a></dt>
+<dd><p>Returns the distribution of returns
+Args:
+* returns (Series, DataFrame): Input return series
+* compounded (bool): Calculate compounded returns?</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.expected_return">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">expected_return</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.expected_return" title="Link to this definition">#</a></dt>
+<dd><p>Returns the expected return for a given period
+by calculating the geometric holding period return</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.geometric_mean">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">geometric_mean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retruns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.geometric_mean" title="Link to this definition">#</a></dt>
+<dd><p>Shorthand for expected_return()</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.ghpr">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">ghpr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">retruns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.ghpr" title="Link to this definition">#</a></dt>
+<dd><p>Shorthand for expected_return()</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.outliers">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">outliers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.outliers" title="Link to this definition">#</a></dt>
+<dd><p>Returns series of outliers</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.remove_outliers">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">remove_outliers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.remove_outliers" title="Link to this definition">#</a></dt>
+<dd><p>Returns series of returns without the outliers</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.best">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">best</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.best" title="Link to this definition">#</a></dt>
+<dd><p>Returns the best day/month/week/quarter/year’s return</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.worst">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">worst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.worst" title="Link to this definition">#</a></dt>
+<dd><p>Returns the worst day/month/week/quarter/year’s return</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.consecutive_wins">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">consecutive_wins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.consecutive_wins" title="Link to this definition">#</a></dt>
+<dd><p>Returns the maximum consecutive wins by day/month/week/quarter/year</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.consecutive_losses">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">consecutive_losses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.consecutive_losses" title="Link to this definition">#</a></dt>
+<dd><p>Returns the maximum consecutive losses by
+day/month/week/quarter/year</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.exposure">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">exposure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.exposure" title="Link to this definition">#</a></dt>
+<dd><p>Returns the market exposure time (returns != 0)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.win_rate">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">win_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.win_rate" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the win ratio for a period</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.avg_return">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">avg_return</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.avg_return" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the average return/trade return for a period</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.avg_win">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">avg_win</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.avg_win" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the average winning
+return/trade return for a period</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.avg_loss">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">avg_loss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.avg_loss" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the average low if
+return/trade return for a period</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.volatility">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">volatility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.volatility" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the volatility of returns for a period</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.rolling_volatility">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">rolling_volatility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rolling_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">126</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods_per_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.rolling_volatility" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the rolling volatility of returns for a period
+Args:
+* returns (Series, DataFrame): Input return series
+* rolling_period (int): Rolling period
+* periods_per_year: periods per year</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.implied_volatility">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">implied_volatility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.implied_volatility" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the implied volatility of returns for a period</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.autocorr_penalty">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">autocorr_penalty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.autocorr_penalty" title="Link to this definition">#</a></dt>
+<dd><p>Metric to account for auto correlation</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.sharpe">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">sharpe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.sharpe" title="Link to this definition">#</a></dt>
+<dd><p>Calculate risk-adjusted return ratio</p>
+<h2 class="rubric" id="id1">Parameters</h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">returns</span></code> (pd.Series/DataFrame): Input return series</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rf</span></code> (float, default=0.0): Annualized risk-free rate</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">periods</span></code> (int, default=365): Number of periods per year</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">annualize</span></code> (bool, default=True): Annualize the ratio</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smart</span></code> (bool, default=False): Apply autocorrelation penalty</p></li>
+</ul>
+<h2 class="rubric" id="id2">Returns</h2>
+<p>float/pd.Series/pd.DataFrame: Sharpe ratio value(s)</p>
+<h2 class="rubric" id="id3">Examples</h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Basic Sharpe ratio</span>
+<span class="n">sharpe_ratio</span> <span class="o">=</span> <span class="n">qs</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sharpe</span><span class="p">(</span><span class="n">returns</span><span class="p">)</span>
+
+<span class="c1"># Smart Sharpe with 2% risk-free rate</span>
+<span class="n">smart_sharpe</span> <span class="o">=</span> <span class="n">qs</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">sharpe</span><span class="p">(</span><span class="n">returns</span><span class="p">,</span> <span class="n">rf</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">smart</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<h2 class="rubric" id="id4">Notes</h2>
+<ul class="simple">
+<li><p>Requires <code class="docutils literal notranslate"><span class="pre">periods</span></code> when rf &gt; 0</p></li>
+<li><p>Annualization uses √periods scaling</p></li>
+<li><p>Smart Sharpe adjusts for return autocorrelation</p></li>
+<li><p>Supports both single strategy and multi-column DataFrames</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.smart_sharpe">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">smart_sharpe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.smart_sharpe" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the smart sharpe ratio
+Args:
+* returns (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.rolling_sharpe">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">rolling_sharpe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rolling_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">126</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods_per_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.rolling_sharpe" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the rolling sharpe ratio
+Args:
+* returns (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* rolling_period (int): Rolling period
+* annualize: return annualize sharpe?
+* periods_per_year: periods per year</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.sortino">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">sortino</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.sortino" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the sortino ratio of access returns</p>
+<p>If rf is non-zero, you must specify periods.
+In this case, rf is assumed to be expressed in yearly (annualized) terms</p>
+<p>Calculation is based on this paper by Red Rock Capital
+<a class="reference external" href="http://www.redrockcapital.com/Sortino__A__Sharper__Ratio_Red_Rock_Capital.pdf">http://www.redrockcapital.com/Sortino__A__Sharper__Ratio_Red_Rock_Capital.pdf</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.smart_sortino">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">smart_sortino</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.smart_sortino" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the smart sortino ratio
+Args:
+* returns (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.rolling_sortino">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">rolling_sortino</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rolling_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">126</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods_per_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.rolling_sortino" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the rolling sortino ratio
+Args:
+* returns (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* rolling_period (int): Rolling period
+* annualize: return annualize sharpe?
+* periods_per_year: periods per year</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.adjusted_sortino">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">adjusted_sortino</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.adjusted_sortino" title="Link to this definition">#</a></dt>
+<dd><p>Jack Schwager’s version of the Sortino ratio allows for
+direct comparisons to the Sharpe. See here for more info:
+<a class="reference external" href="https://archive.is/wip/2rwFW">https://archive.is/wip/2rwFW</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.probabilistic_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">probabilistic_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sharpe'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.probabilistic_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the probabilistic sharpe ratio
+Args:
+* series (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?
+* smart: return smart sharpe ratio</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.probabilistic_sharpe_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">probabilistic_sharpe_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.probabilistic_sharpe_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the probabilistic sharpe ratio
+Args:
+* series (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?
+* smart: return smart sharpe ratio</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.probabilistic_sortino_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">probabilistic_sortino_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.probabilistic_sortino_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the probabilistic sortino ratio
+Args:
+* series (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?
+* smart: return smart sharpe ratio</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.probabilistic_adjusted_sortino_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">probabilistic_adjusted_sortino_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.probabilistic_adjusted_sortino_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the probabilistic adjusted sortino ratio</p>
+<p>Args:
+* series (Series, DataFrame): Input return series
+* rf (float): Risk-free rate expressed as a yearly (annualized) return
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?
+* smart: return smart sharpe ratio</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.treynor_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">treynor_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.treynor_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the Treynor ratio</p>
+<p>Args:
+* returns (Series, DataFrame): Input return series
+* benchmatk (String, Series, DataFrame): Benchmark to compare beta to
+* periods (int): Freq. of returns</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.omega">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">omega</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required_return</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.omega" title="Link to this definition">#</a></dt>
+<dd><p>Determines the Omega ratio of a strategy.
+See <a class="reference external" href="https://en.wikipedia.org/wiki/Omega_ratio">https://en.wikipedia.org/wiki/Omega_ratio</a> for more details.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.gain_to_pain_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">gain_to_pain_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.gain_to_pain_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Jack Schwager’s GPR. See here for more info:
+<a class="reference external" href="https://archive.is/wip/2rwFW">https://archive.is/wip/2rwFW</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.cagr">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">cagr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.cagr" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the communicative annualized growth return
+(CAGR%) of access returns</p>
+<p>If rf is non-zero, you must specify periods.
+In this case, rf is assumed to be expressed in yearly (annualized) terms</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.rar">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">rar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.rar" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the risk-adjusted return of access returns
+(CAGR / exposure. takes time into account.)</p>
+<p>If rf is non-zero, you must specify periods.
+In this case, rf is assumed to be expressed in yearly (annualized) terms</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.skew">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">skew</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.skew" title="Link to this definition">#</a></dt>
+<dd><p>Calculates returns’ skewness
+(the degree of asymmetry of a distribution around its mean)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.kurtosis">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">kurtosis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.kurtosis" title="Link to this definition">#</a></dt>
+<dd><p>Calculates returns’ kurtosis
+(the degree to which a distribution peak compared to a normal distribution)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.calmar">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">calmar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.calmar" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the calmar ratio (CAGR% / MaxDD%)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.ulcer_index">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">ulcer_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.ulcer_index" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the ulcer index score (downside risk measurment)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.ulcer_performance_index">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">ulcer_performance_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.ulcer_performance_index" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the ulcer index score
+(downside risk measurment)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.upi">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">upi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.upi" title="Link to this definition">#</a></dt>
+<dd><p>Shorthand for ulcer_performance_index()</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.serenity_index">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">serenity_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.serenity_index" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the serenity index score
+(<a class="reference external" href="https://www.keyquant.com/Download/GetFile?Filename=%5CPublications%5CKeyQuant_WhitePaper_APT_Part1.pdf">https://www.keyquant.com/Download/GetFile?Filename=\Publications\KeyQuant_WhitePaper_APT_Part1.pdf</a>)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.risk_of_ruin">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">risk_of_ruin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.risk_of_ruin" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the risk of ruin
+(the likelihood of losing all one’s investment capital)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.ror">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">ror</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.ror" title="Link to this definition">#</a></dt>
+<dd><p>Shorthand for risk_of_ruin()</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.value_at_risk">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">value_at_risk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.value_at_risk" title="Link to this definition">#</a></dt>
+<dd><p>Calculats the daily value-at-risk
+(variance-covariance calculation with confidence n)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.var">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">var</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.var" title="Link to this definition">#</a></dt>
+<dd><p>Shorthand for value_at_risk()</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.conditional_value_at_risk">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">conditional_value_at_risk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.conditional_value_at_risk" title="Link to this definition">#</a></dt>
+<dd><p>Calculats the conditional daily value-at-risk (aka expected shortfall)
+quantifies the amount of tail risk an investment</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.cvar">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">cvar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.cvar" title="Link to this definition">#</a></dt>
+<dd><p>Shorthand for conditional_value_at_risk()</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.expected_shortfall">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">expected_shortfall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.expected_shortfall" title="Link to this definition">#</a></dt>
+<dd><p>Shorthand for conditional_value_at_risk()</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.tail_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">tail_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.tail_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Measures the ratio between the right
+(95%) and left tail (5%).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.payoff_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">payoff_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.payoff_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Measures the payoff ratio (average win/average loss)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.win_loss_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">win_loss_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.win_loss_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Shorthand for payoff_ratio()</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.profit_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">profit_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.profit_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Measures the profit ratio (win ratio / loss ratio)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.profit_factor">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">profit_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.profit_factor" title="Link to this definition">#</a></dt>
+<dd><p>Measures the profit ratio (wins/loss)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.cpc_index">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">cpc_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.cpc_index" title="Link to this definition">#</a></dt>
+<dd><p>Measures the cpc ratio
+(profit factor * win % * win loss ratio)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.common_sense_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">common_sense_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.common_sense_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Measures the common sense ratio (profit factor * tail ratio)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.outlier_win_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">outlier_win_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.99</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.outlier_win_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the outlier winners ratio
+99th percentile of returns / mean positive return</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.outlier_loss_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">outlier_loss_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.outlier_loss_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the outlier losers ratio
+1st percentile of returns / mean negative return</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.recovery_factor">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">recovery_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.recovery_factor" title="Link to this definition">#</a></dt>
+<dd><p>Measures how fast the strategy recovers from drawdowns</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.risk_return_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">risk_return_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.risk_return_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the return / risk ratio
+(sharpe ratio without factoring in the risk-free rate)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.max_drawdown">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">max_drawdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.max_drawdown" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the maximum drawdown</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.to_drawdown_series">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">to_drawdown_series</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.to_drawdown_series" title="Link to this definition">#</a></dt>
+<dd><p>Convert returns series to drawdown series</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.drawdown_details">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">drawdown_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">drawdown</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.drawdown_details" title="Link to this definition">#</a></dt>
+<dd><p>Calculates drawdown details, including start/end/valley dates,
+duration, max drawdown and max dd for 99% of the dd period
+for every drawdown period</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.kelly_criterion">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">kelly_criterion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.kelly_criterion" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the recommended maximum amount of capital that
+should be allocated to the given strategy, based on the
+Kelly Criterion (<a class="reference external" href="http://en.wikipedia.org/wiki/Kelly_criterion">http://en.wikipedia.org/wiki/Kelly_criterion</a>)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.benchmark_correlation">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">benchmark_correlation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.benchmark_correlation" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the correlation to the benchmark</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.r_squared">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">r_squared</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.r_squared" title="Link to this definition">#</a></dt>
+<dd><p>Measures the straight line fit of the equity curve</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.r2">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">r2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.r2" title="Link to this definition">#</a></dt>
+<dd><p>Shorthand for r_squared()</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.information_ratio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">information_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.information_ratio" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the information ratio
+(basically the risk return ratio of the net profits)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.greeks">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">greeks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.greeks" title="Link to this definition">#</a></dt>
+<dd><p>Calculates alpha and beta of the portfolio</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.rolling_greeks">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">rolling_greeks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.rolling_greeks" title="Link to this definition">#</a></dt>
+<dd><p>Calculates rolling alpha and beta of the portfolio</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.compare">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">compare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">benchmark</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">round_vals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.compare" title="Link to this definition">#</a></dt>
+<dd><p>Compare returns to benchmark on a
+day/week/month/quarter/year basis</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.monthly_returns">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">monthly_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eoy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.monthly_returns" title="Link to this definition">#</a></dt>
+<dd><p>Calculates monthly returns</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.stats.romad">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.stats.</span></span><span class="sig-name descname"><span class="pre">romad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">365</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annualize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.stats.romad" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the romad (return/cagr over max drawdown) of a strategy
+Args:
+* returns (Series, DataFrame): Input return series
+* periods (int): Freq. of returns
+* annualize: return annualize sharpe?
+* smart: return smart sharpe ratio</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="quantstats_lumi.utils.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.utils</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="quantstats_lumi.reports.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.reports</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.pct_rank"><code class="docutils literal notranslate"><span class="pre">pct_rank()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.compsum"><code class="docutils literal notranslate"><span class="pre">compsum()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.comp"><code class="docutils literal notranslate"><span class="pre">comp()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.distribution"><code class="docutils literal notranslate"><span class="pre">distribution()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.expected_return"><code class="docutils literal notranslate"><span class="pre">expected_return()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.geometric_mean"><code class="docutils literal notranslate"><span class="pre">geometric_mean()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.ghpr"><code class="docutils literal notranslate"><span class="pre">ghpr()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.outliers"><code class="docutils literal notranslate"><span class="pre">outliers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.remove_outliers"><code class="docutils literal notranslate"><span class="pre">remove_outliers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.best"><code class="docutils literal notranslate"><span class="pre">best()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.worst"><code class="docutils literal notranslate"><span class="pre">worst()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.consecutive_wins"><code class="docutils literal notranslate"><span class="pre">consecutive_wins()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.consecutive_losses"><code class="docutils literal notranslate"><span class="pre">consecutive_losses()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.exposure"><code class="docutils literal notranslate"><span class="pre">exposure()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.win_rate"><code class="docutils literal notranslate"><span class="pre">win_rate()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.avg_return"><code class="docutils literal notranslate"><span class="pre">avg_return()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.avg_win"><code class="docutils literal notranslate"><span class="pre">avg_win()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.avg_loss"><code class="docutils literal notranslate"><span class="pre">avg_loss()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.volatility"><code class="docutils literal notranslate"><span class="pre">volatility()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.rolling_volatility"><code class="docutils literal notranslate"><span class="pre">rolling_volatility()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.implied_volatility"><code class="docutils literal notranslate"><span class="pre">implied_volatility()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.autocorr_penalty"><code class="docutils literal notranslate"><span class="pre">autocorr_penalty()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.sharpe"><code class="docutils literal notranslate"><span class="pre">sharpe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.smart_sharpe"><code class="docutils literal notranslate"><span class="pre">smart_sharpe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.rolling_sharpe"><code class="docutils literal notranslate"><span class="pre">rolling_sharpe()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.sortino"><code class="docutils literal notranslate"><span class="pre">sortino()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.smart_sortino"><code class="docutils literal notranslate"><span class="pre">smart_sortino()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.rolling_sortino"><code class="docutils literal notranslate"><span class="pre">rolling_sortino()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.adjusted_sortino"><code class="docutils literal notranslate"><span class="pre">adjusted_sortino()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.probabilistic_ratio"><code class="docutils literal notranslate"><span class="pre">probabilistic_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.probabilistic_sharpe_ratio"><code class="docutils literal notranslate"><span class="pre">probabilistic_sharpe_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.probabilistic_sortino_ratio"><code class="docutils literal notranslate"><span class="pre">probabilistic_sortino_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.probabilistic_adjusted_sortino_ratio"><code class="docutils literal notranslate"><span class="pre">probabilistic_adjusted_sortino_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.treynor_ratio"><code class="docutils literal notranslate"><span class="pre">treynor_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.omega"><code class="docutils literal notranslate"><span class="pre">omega()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.gain_to_pain_ratio"><code class="docutils literal notranslate"><span class="pre">gain_to_pain_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.cagr"><code class="docutils literal notranslate"><span class="pre">cagr()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.rar"><code class="docutils literal notranslate"><span class="pre">rar()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.skew"><code class="docutils literal notranslate"><span class="pre">skew()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.kurtosis"><code class="docutils literal notranslate"><span class="pre">kurtosis()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.calmar"><code class="docutils literal notranslate"><span class="pre">calmar()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.ulcer_index"><code class="docutils literal notranslate"><span class="pre">ulcer_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.ulcer_performance_index"><code class="docutils literal notranslate"><span class="pre">ulcer_performance_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.upi"><code class="docutils literal notranslate"><span class="pre">upi()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.serenity_index"><code class="docutils literal notranslate"><span class="pre">serenity_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.risk_of_ruin"><code class="docutils literal notranslate"><span class="pre">risk_of_ruin()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.ror"><code class="docutils literal notranslate"><span class="pre">ror()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.value_at_risk"><code class="docutils literal notranslate"><span class="pre">value_at_risk()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.var"><code class="docutils literal notranslate"><span class="pre">var()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.conditional_value_at_risk"><code class="docutils literal notranslate"><span class="pre">conditional_value_at_risk()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.cvar"><code class="docutils literal notranslate"><span class="pre">cvar()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.expected_shortfall"><code class="docutils literal notranslate"><span class="pre">expected_shortfall()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.tail_ratio"><code class="docutils literal notranslate"><span class="pre">tail_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.payoff_ratio"><code class="docutils literal notranslate"><span class="pre">payoff_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.win_loss_ratio"><code class="docutils literal notranslate"><span class="pre">win_loss_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.profit_ratio"><code class="docutils literal notranslate"><span class="pre">profit_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.profit_factor"><code class="docutils literal notranslate"><span class="pre">profit_factor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.cpc_index"><code class="docutils literal notranslate"><span class="pre">cpc_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.common_sense_ratio"><code class="docutils literal notranslate"><span class="pre">common_sense_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.outlier_win_ratio"><code class="docutils literal notranslate"><span class="pre">outlier_win_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.outlier_loss_ratio"><code class="docutils literal notranslate"><span class="pre">outlier_loss_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.recovery_factor"><code class="docutils literal notranslate"><span class="pre">recovery_factor()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.risk_return_ratio"><code class="docutils literal notranslate"><span class="pre">risk_return_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.max_drawdown"><code class="docutils literal notranslate"><span class="pre">max_drawdown()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.to_drawdown_series"><code class="docutils literal notranslate"><span class="pre">to_drawdown_series()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.drawdown_details"><code class="docutils literal notranslate"><span class="pre">drawdown_details()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.kelly_criterion"><code class="docutils literal notranslate"><span class="pre">kelly_criterion()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.benchmark_correlation"><code class="docutils literal notranslate"><span class="pre">benchmark_correlation()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.r_squared"><code class="docutils literal notranslate"><span class="pre">r_squared()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.r2"><code class="docutils literal notranslate"><span class="pre">r2()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.information_ratio"><code class="docutils literal notranslate"><span class="pre">information_ratio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.greeks"><code class="docutils literal notranslate"><span class="pre">greeks()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.rolling_greeks"><code class="docutils literal notranslate"><span class="pre">rolling_greeks()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.compare"><code class="docutils literal notranslate"><span class="pre">compare()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.monthly_returns"><code class="docutils literal notranslate"><span class="pre">monthly_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.stats.romad"><code class="docutils literal notranslate"><span class="pre">romad()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

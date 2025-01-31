@@ -1,0 +1,1047 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Change Log &#8212; QuantStats Lumi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=0ce46f78"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'CHANGELOG';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="apidocs/index.html" />
+    <link rel="prev" title="QuantStats Lumi" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="QuantStats Lumi - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="QuantStats Lumi - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    QuantStats Lumi
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Change Log</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="apidocs/index.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="apidocs/quantstats_lumi/quantstats_lumi.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="apidocs/quantstats_lumi/quantstats_lumi._plotting.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi._plotting</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="apidocs/quantstats_lumi/quantstats_lumi._plotting.core.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi._plotting.core</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="apidocs/quantstats_lumi/quantstats_lumi._plotting.wrappers.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi._plotting.wrappers</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="apidocs/quantstats_lumi/quantstats_lumi.version.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="apidocs/quantstats_lumi/quantstats_lumi.plots.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.plots</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="apidocs/quantstats_lumi/quantstats_lumi.utils.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.utils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="apidocs/quantstats_lumi/quantstats_lumi.stats.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.stats</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="apidocs/quantstats_lumi/quantstats_lumi.reports.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.reports</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="myst_markdown_demos.html">MyST Markdown Demos</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jmbejara/blank_project" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jmbejara/blank_project/issues/new?title=Issue%20on%20page%20%2FCHANGELOG.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/CHANGELOG.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Change Log</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">0.0.62</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">0.0.61</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">0.0.60</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">0.0.59</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">0.0.58</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">0.0.57</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">0.0.56</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">0.0.55</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">0.0.54</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">0.0.53</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">0.0.52</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">0.0.51</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">0.0.50</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">0.0.49</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">0.0.48</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">0.0.47</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">0.0.46</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">0.0.45</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">0.0.44</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">0.0.43</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">0.0.42</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">0.0.41</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">0.0.40</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">0.0.39</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">0.0.38</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">0.0.37</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">0.0.36</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">0.0.35</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">0.0.34</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">0.0.33</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">0.0.32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">0.0.31</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">0.0.30</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">0.0.29</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">0.0.28</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">0.0.27</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">0.0.26</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">0.0.25</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">0.0.24</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">0.0.23</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">0.0.22</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">0.0.21</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">0.0.20</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">0.0.19</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">0.0.18</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">0.0.17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">0.0.16</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id48">0.0.15</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id49">0.0.14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id50">0.0.13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id51">0.0.12</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id52">0.0.11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">0.0.10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">0.0.09</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id55">0.0.08</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id56">0.0.07</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id57">0.0.06</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id58">0.0.05</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id59">0.0.04</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id60">0.0.03</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id61">0.0.02</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id62">0.0.01</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="change-log">
+<h1>Change Log<a class="headerlink" href="#change-log" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>0.0.62<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Changed <cite>serenity_index</cite> and <cite>recovery_factor</cite> to use simple sum instead of compounded sum</p></li>
+<li><p>Reports passing the <cite>compounded</cite> param to all supporting methods</p></li>
+<li><p>Fixed a bug related to monthly_heatmap display</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>0.0.61<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed positional arguments passed to cagr()</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>0.0.60<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Multi-strategy reports! You can now pass a dataframe with a column for each strategy to get a unified, single report for all</p></li>
+<li><p>Support request proxy with yfinance</p></li>
+<li><p>Added custom periods to CAGR</p></li>
+<li><p>Correct drawdown days calculation when last day is a drawdown</p></li>
+<li><p>Write report in correct file path</p></li>
+<li><p>IPython 7+ compatibility</p></li>
+<li><p>Pandas 2.0 compatibility</p></li>
+<li><p>Fix for benchmark name when supplied by the user</p></li>
+<li><p>Handles tz-native and tz-aware comparisson issue</p></li>
+<li><p>Adding benchmark name to html report</p></li>
+<li><p>Update README ticker to META :)</p></li>
+<li><p>Many pull requests merged</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>0.0.59<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed EOY compounded return calculation</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>0.0.58<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Run fillna(0) on plot’s beta (issue #193)</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>0.0.57<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed <cite>sigma</cite> calculation in <cite>stats.probabilistic_ratio()</cite></p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>0.0.56<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added option to explicitly provide the benchmark title via <cite>benchmark_title=…</cite></p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>0.0.55<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fix for benchmark name in html report when supplied by the user</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>0.0.54<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed dependency name in requirements.txt</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>0.0.53<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added information ratio to reports</p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>0.0.52<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added Treynor ratio</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>0.0.51<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added max consecutive wins/losses to full report</p></li>
+<li><p>Added “correlation to benchmark” to report</p></li>
+<li><p>Cleanup inf/nan from reports</p></li>
+<li><p>Added benchmark name to stats column and html report</p></li>
+<li><p>Added probabilistic sharpe/sortino ratios</p></li>
+<li><p>Fix relative dates calculations</p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>0.0.50<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed a bug when reporting the max drawdown</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>0.0.49<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed an issue with saving the HTML report as a file</p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>0.0.48<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed RF display bug</p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>0.0.47<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed average DD display bug</p></li>
+</ul>
+</section>
+<section id="id17">
+<h2>0.0.46<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Misc bug fixes and speedups</p></li>
+</ul>
+</section>
+<section id="id18">
+<h2>0.0.45<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">stats.rolling_sharpe()</span></code> parameter mismatch</p></li>
+</ul>
+</section>
+<section id="id19">
+<h2>0.0.44<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Match dates logic on <code class="docutils literal notranslate"><span class="pre">utils.make_index()</span></code></p></li>
+</ul>
+</section>
+<section id="id20">
+<h2>0.0.43<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">stats.rolling_sortino()</span></code> calculations</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">match_dates</span></code> flag to reports to make strategy and benchmark comparible by syncing their dates and frequency</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">prepare_returns</span></code> flag to <code class="docutils literal notranslate"><span class="pre">utils._prepare_benchmark()</span></code></p></li>
+<li><p>Misc code cleanup and speedups</p></li>
+</ul>
+</section>
+<section id="id21">
+<h2>0.0.42<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Usability improvements</p></li>
+</ul>
+</section>
+<section id="id22">
+<h2>0.0.41<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Typos fixed</p></li>
+</ul>
+</section>
+<section id="id23">
+<h2>0.0.40<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added rebalance option to <code class="docutils literal notranslate"><span class="pre">utils.make_index()</span></code></p></li>
+<li><p>Added option to add <code class="docutils literal notranslate"><span class="pre">log_scale=True/False`</span> <span class="pre">to</span> <span class="pre">``plots.snapshot()</span></code></p></li>
+</ul>
+</section>
+<section id="id24">
+<h2>0.0.39<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">plots.rolling_volatility()</span></code> benchmark display (bug introduced in 0.0.37)</p></li>
+</ul>
+</section>
+<section id="id25">
+<h2>0.0.38<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">stats.smart_sharpe()</span></code> and <code class="docutils literal notranslate"><span class="pre">stats.smart_sortino()</span></code></p></li>
+</ul>
+</section>
+<section id="id26">
+<h2>0.0.37<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>added <code class="docutils literal notranslate"><span class="pre">stats.rolling_sharpe()</span></code>, <code class="docutils literal notranslate"><span class="pre">stats.rolling_sortino()</span></code>, <code class="docutils literal notranslate"><span class="pre">stats.and</span> <span class="pre">rolling_volatility()</span></code></p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">stats.distribution()</span></code></p></li>
+<li><p>Added Omega ratio</p></li>
+<li><p>BREAKING CHANGE: Eenamed <code class="docutils literal notranslate"><span class="pre">trading_year_days</span></code> param to <code class="docutils literal notranslate"><span class="pre">periods_per_year</span></code></p></li>
+<li><p>Misc code cleanup and speedups</p></li>
+</ul>
+</section>
+<section id="id27">
+<h2>0.0.36<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">as_pct</span></code> params to <code class="docutils literal notranslate"><span class="pre">reports.metrics()</span></code> for when you need display data as DataFrame</p></li>
+</ul>
+</section>
+<section id="id28">
+<h2>0.0.35<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Passing correct rolling windows in <code class="docutils literal notranslate"><span class="pre">rolling_beta()</span></code></p></li>
+<li><p>Added Serenity Index</p></li>
+<li><p>Passing <code class="docutils literal notranslate"><span class="pre">trading_year_days</span></code> to method <code class="docutils literal notranslate"><span class="pre">metrics</span></code></p></li>
+<li><p>Fixed “day is out of range for month” error</p></li>
+</ul>
+</section>
+<section id="id29">
+<h2>0.0.34<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed bug in <code class="docutils literal notranslate"><span class="pre">stats.consecutive_wins()</span></code> and <code class="docutils literal notranslate"><span class="pre">stats.consecutive_losses()</span></code></p></li>
+<li><p>Fixed seaborn’s depreated <code class="docutils literal notranslate"><span class="pre">distplot</span></code> warning</p></li>
+<li><p>Improved annualization by passing <code class="docutils literal notranslate"><span class="pre">trading_year_days</span></code></p></li>
+</ul>
+</section>
+<section id="id30">
+<h2>0.0.33<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added option to pass the number of days per year in reports, so you can now use <code class="docutils literal notranslate"><span class="pre">trading_year_days=365</span></code> if you’re trading crypto, or any other number for intl. markets.</p></li>
+</ul>
+</section>
+<section id="id31">
+<h2>0.0.32<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed bug in <code class="docutils literal notranslate"><span class="pre">plot_histogram()</span></code> (issues 94+95)</p></li>
+</ul>
+</section>
+<section id="id32">
+<h2>0.0.31<a class="headerlink" href="#id32" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Enable period setting for adjusted sortino</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">utils.make_index()</span></code> for easy “etf” creation</p></li>
+</ul>
+</section>
+<section id="id33">
+<h2>0.0.30<a class="headerlink" href="#id33" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed PIP installer</p></li>
+</ul>
+</section>
+<section id="id34">
+<h2>0.0.29<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Minor code refactoring</p></li>
+</ul>
+</section>
+<section id="id35">
+<h2>0.0.28<a class="headerlink" href="#id35" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gain_to_pain</span></code> renamed to <code class="docutils literal notranslate"><span class="pre">gain_to_pain_ratio</span></code></p></li>
+<li><p>Minor code refactoring</p></li>
+</ul>
+</section>
+<section id="id36">
+<h2>0.0.27<a class="headerlink" href="#id36" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added Sortino/√2 and Gain/Pain ratio to report</p></li>
+<li><p>Merged PRs to fix some bugs</p></li>
+</ul>
+</section>
+<section id="id37">
+<h2>0.0.26<a class="headerlink" href="#id37" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Misc bug fixes and code improvements</p></li>
+</ul>
+</section>
+<section id="id38">
+<h2>0.0.25<a class="headerlink" href="#id38" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">conditional_value_at_risk()</span></code></p></li>
+<li><p>Fixed <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> issue notebooks</p></li>
+</ul>
+</section>
+<section id="id39">
+<h2>0.0.24<a class="headerlink" href="#id39" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added mtd/qtd/ytd methods for panda (usage: <code class="docutils literal notranslate"><span class="pre">df.mtd()</span></code>)</p></li>
+<li><p>Fixed Pandas deprecation warning</p></li>
+<li><p>Fixed Matplotlib deprecation warning</p></li>
+<li><p>Try setting <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> automatic in notebooks</p></li>
+</ul>
+</section>
+<section id="id40">
+<h2>0.0.23<a class="headerlink" href="#id40" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed profit Factor formula</p></li>
+</ul>
+</section>
+<section id="id41">
+<h2>0.0.22<a class="headerlink" href="#id41" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Misc bug fixes</p></li>
+</ul>
+</section>
+<section id="id42">
+<h2>0.0.21<a class="headerlink" href="#id42" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed chart EOY chart’s <code class="docutils literal notranslate"><span class="pre">xticks</span></code> when charting data with 10+ years</p></li>
+<li><p>Fixed issue where daily return &gt;= 100%</p></li>
+<li><p>Fixed Snapshot plot</p></li>
+<li><p>Removed duplicaated code</p></li>
+<li><p>Added conda installer</p></li>
+<li><p>Misc code refactoring and optimizations</p></li>
+</ul>
+</section>
+<section id="id43">
+<h2>0.0.20<a class="headerlink" href="#id43" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Misc bugfixes</p></li>
+</ul>
+</section>
+<section id="id44">
+<h2>0.0.19<a class="headerlink" href="#id44" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Cleaning up data before calculations (replaces inf/-inf/-0 with 0)</p></li>
+<li><p>Removed usage of <code class="docutils literal notranslate"><span class="pre">pandas.compound()</span></code> for future <code class="docutils literal notranslate"><span class="pre">pandas</span></code> version compatibility</p></li>
+<li><p>Auto conversion of price-to-returns and returns-to-data as needed</p></li>
+</ul>
+</section>
+<section id="id45">
+<h2>0.0.18<a class="headerlink" href="#id45" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed issue when last date in data is in the past (issue #4)</p></li>
+<li><p>Fixed issue when data has less than 5 drawdown periods (issue #4)</p></li>
+</ul>
+</section>
+<section id="id46">
+<h2>0.0.17<a class="headerlink" href="#id46" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed CAGR calculation for more accuracy</p></li>
+<li><p>Handles drawdowns better in live trading mode when currently in drawdown</p></li>
+</ul>
+</section>
+<section id="id47">
+<h2>0.0.16<a class="headerlink" href="#id47" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Handles no drawdowns better</p></li>
+</ul>
+</section>
+<section id="id48">
+<h2>0.0.15<a class="headerlink" href="#id48" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Better report formatting</p></li>
+<li><p>Code cleanup</p></li>
+</ul>
+</section>
+<section id="id49">
+<h2>0.0.14<a class="headerlink" href="#id49" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed calculation for rolling sharpe and rolling sortino charts</p></li>
+<li><p>Nicer CSS when printing html reports</p></li>
+</ul>
+</section>
+<section id="id50">
+<h2>0.0.13<a class="headerlink" href="#id50" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Fixed non-compounded plots in reports when using <code class="docutils literal notranslate"><span class="pre">compounded=False</span></code></p></li>
+</ul>
+</section>
+<section id="id51">
+<h2>0.0.12<a class="headerlink" href="#id51" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Option to add <code class="docutils literal notranslate"><span class="pre">compounded=True/False</span></code> to reports (default is <code class="docutils literal notranslate"><span class="pre">True</span></code>)</p></li>
+</ul>
+</section>
+<section id="id52">
+<h2>0.0.11<a class="headerlink" href="#id52" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Minor bug fixes</p></li>
+</ul>
+</section>
+<section id="id53">
+<h2>0.0.10<a class="headerlink" href="#id53" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Updated to install and use <code class="docutils literal notranslate"><span class="pre">yfinance</span></code> instead of <code class="docutils literal notranslate"><span class="pre">fix_yahoo_finance</span></code></p></li>
+</ul>
+</section>
+<section id="id54">
+<h2>0.0.09<a class="headerlink" href="#id54" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added support for 3 modes (cumulative, compounded, fixed amount) in <code class="docutils literal notranslate"><span class="pre">plots.earnings()</span></code> and <code class="docutils literal notranslate"><span class="pre">utils.make_portfolio()</span></code></p></li>
+<li><p>Added two DataFrame utilities: <code class="docutils literal notranslate"><span class="pre">df.curr_month()</span></code> and <code class="docutils literal notranslate"><span class="pre">df.date(date)</span></code></p></li>
+<li><p>Misc bug fixes and code refactoring</p></li>
+</ul>
+</section>
+<section id="id55">
+<h2>0.0.08<a class="headerlink" href="#id55" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Better calculations for cagr, var, cvar, avg win/loss and payoff_ratio</p></li>
+<li><p>Removed unused param from <code class="docutils literal notranslate"><span class="pre">to_plotly()</span></code></p></li>
+<li><p>Added risk free param to <code class="docutils literal notranslate"><span class="pre">log_returns()</span></code> + renamed it to <code class="docutils literal notranslate"><span class="pre">to_log_returns()</span></code></p></li>
+<li><p>Misc bug fixes and code improvements</p></li>
+</ul>
+</section>
+<section id="id56">
+<h2>0.0.07<a class="headerlink" href="#id56" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Plots returns figure if <code class="docutils literal notranslate"><span class="pre">show</span></code> is set to False</p></li>
+</ul>
+</section>
+<section id="id57">
+<h2>0.0.06<a class="headerlink" href="#id57" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Minor bug fix</p></li>
+</ul>
+</section>
+<section id="id58">
+<h2>0.0.05<a class="headerlink" href="#id58" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">plots.to_plotly()</span></code> method</p></li>
+<li><p>Added Ulcer Index to metrics report</p></li>
+<li><p>Better returns/price detection</p></li>
+<li><p>Bug fixes and code refactoring</p></li>
+</ul>
+</section>
+<section id="id59">
+<h2>0.0.04<a class="headerlink" href="#id59" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">pct_rank()</span></code> method to stats</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">multi_shift()</span></code> method to utils</p></li>
+</ul>
+</section>
+<section id="id60">
+<h2>0.0.03<a class="headerlink" href="#id60" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Better VaR/cVaR calculation</p></li>
+<li><p>Fixed calculation of <code class="docutils literal notranslate"><span class="pre">to_drawdown_series()</span></code></p></li>
+<li><p>Changed VaR/cVaR default confidence to 95%</p></li>
+<li><p>Improved Sortino formula</p></li>
+<li><p>Fixed conversion of returns to prices (<code class="docutils literal notranslate"><span class="pre">to_prices()</span></code>)</p></li>
+</ul>
+</section>
+<section id="id61">
+<h2>0.0.02<a class="headerlink" href="#id61" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Initial release</p></li>
+</ul>
+</section>
+<section id="id62">
+<h2>0.0.01<a class="headerlink" href="#id62" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Pre-release placeholder</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">QuantStats Lumi</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="apidocs/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">API Reference</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">0.0.62</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">0.0.61</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">0.0.60</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">0.0.59</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">0.0.58</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">0.0.57</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">0.0.56</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">0.0.55</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">0.0.54</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">0.0.53</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">0.0.52</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">0.0.51</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">0.0.50</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">0.0.49</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">0.0.48</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">0.0.47</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">0.0.46</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">0.0.45</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">0.0.44</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">0.0.43</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">0.0.42</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">0.0.41</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">0.0.40</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">0.0.39</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">0.0.38</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">0.0.37</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">0.0.36</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">0.0.35</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">0.0.34</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">0.0.33</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">0.0.32</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">0.0.31</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">0.0.30</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">0.0.29</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">0.0.28</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">0.0.27</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">0.0.26</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">0.0.25</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">0.0.24</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">0.0.23</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">0.0.22</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">0.0.21</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">0.0.20</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">0.0.19</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">0.0.18</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">0.0.17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">0.0.16</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id48">0.0.15</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id49">0.0.14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id50">0.0.13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id51">0.0.12</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id52">0.0.11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">0.0.10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">0.0.09</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id55">0.0.08</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id56">0.0.07</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id57">0.0.06</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id58">0.0.05</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id59">0.0.04</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id60">0.0.03</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id61">0.0.02</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id62">0.0.01</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

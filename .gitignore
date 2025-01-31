@@ -22,4 +22,4 @@ _docs/*
 .doit.db.db
 docs_src/apidocs/*
 .DS_Store
-docs/*
+# docs/*

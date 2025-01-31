@@ -1,0 +1,864 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>quantstats_lumi.utils &#8212; QuantStats Lumi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=0ce46f78"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'apidocs/quantstats_lumi/quantstats_lumi.utils';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="quantstats_lumi.stats" href="quantstats_lumi.stats.html" />
+    <link rel="prev" title="quantstats_lumi.plots" href="quantstats_lumi.plots.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="QuantStats Lumi - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="QuantStats Lumi - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    QuantStats Lumi
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG.html">Change Log</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="quantstats_lumi.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="quantstats_lumi._plotting.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi._plotting</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="quantstats_lumi._plotting.core.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi._plotting.core</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="quantstats_lumi._plotting.wrappers.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi._plotting.wrappers</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="quantstats_lumi.version.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.version</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantstats_lumi.plots.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.plots</span></code></a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.utils</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantstats_lumi.stats.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.stats</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="quantstats_lumi.reports.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.reports</span></code></a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../myst_markdown_demos.html">MyST Markdown Demos</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jmbejara/blank_project" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jmbejara/blank_project/issues/new?title=Issue%20on%20page%20%2Fapidocs/quantstats_lumi/quantstats_lumi.utils.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/apidocs/quantstats_lumi/quantstats_lumi.utils.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>quantstats_lumi.utils</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._mtd"><code class="docutils literal notranslate"><span class="pre">_mtd()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._qtd"><code class="docutils literal notranslate"><span class="pre">_qtd()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._ytd"><code class="docutils literal notranslate"><span class="pre">_ytd()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._pandas_date"><code class="docutils literal notranslate"><span class="pre">_pandas_date()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._pandas_current_month"><code class="docutils literal notranslate"><span class="pre">_pandas_current_month()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.multi_shift"><code class="docutils literal notranslate"><span class="pre">multi_shift()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.to_returns"><code class="docutils literal notranslate"><span class="pre">to_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.to_prices"><code class="docutils literal notranslate"><span class="pre">to_prices()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.log_returns"><code class="docutils literal notranslate"><span class="pre">log_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.to_log_returns"><code class="docutils literal notranslate"><span class="pre">to_log_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.exponential_stdev"><code class="docutils literal notranslate"><span class="pre">exponential_stdev()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.rebase"><code class="docutils literal notranslate"><span class="pre">rebase()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.group_returns"><code class="docutils literal notranslate"><span class="pre">group_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.aggregate_returns"><code class="docutils literal notranslate"><span class="pre">aggregate_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.to_excess_returns"><code class="docutils literal notranslate"><span class="pre">to_excess_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._prepare_prices"><code class="docutils literal notranslate"><span class="pre">_prepare_prices()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._prepare_returns"><code class="docutils literal notranslate"><span class="pre">_prepare_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.download_returns"><code class="docutils literal notranslate"><span class="pre">download_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._prepare_benchmark"><code class="docutils literal notranslate"><span class="pre">_prepare_benchmark()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._round_to_closest"><code class="docutils literal notranslate"><span class="pre">_round_to_closest()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._file_stream"><code class="docutils literal notranslate"><span class="pre">_file_stream()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._in_notebook"><code class="docutils literal notranslate"><span class="pre">_in_notebook()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._count_consecutive"><code class="docutils literal notranslate"><span class="pre">_count_consecutive()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._score_str"><code class="docutils literal notranslate"><span class="pre">_score_str()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.make_index"><code class="docutils literal notranslate"><span class="pre">make_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.make_portfolio"><code class="docutils literal notranslate"><span class="pre">make_portfolio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._flatten_dataframe"><code class="docutils literal notranslate"><span class="pre">_flatten_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="module-quantstats_lumi.utils">
+<span id="quantstats-lumi-utils"></span><h1><a class="reference internal" href="#module-quantstats_lumi.utils" title="quantstats_lumi.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.utils</span></code></a><a class="headerlink" href="#module-quantstats_lumi.utils" title="Link to this heading">#</a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table table-left">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils._mtd" title="quantstats_lumi.utils._mtd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_mtd</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils._qtd" title="quantstats_lumi.utils._qtd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_qtd</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils._ytd" title="quantstats_lumi.utils._ytd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_ytd</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils._pandas_date" title="quantstats_lumi.utils._pandas_date"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_pandas_date</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils._pandas_current_month" title="quantstats_lumi.utils._pandas_current_month"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_pandas_current_month</span></code></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils.multi_shift" title="quantstats_lumi.utils.multi_shift"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multi_shift</span></code></a></p></td>
+<td><p>Get last N rows relative to another row in pandas</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils.to_returns" title="quantstats_lumi.utils.to_returns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_returns</span></code></a></p></td>
+<td><p>Calculates the simple arithmetic returns of a price series</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils.to_prices" title="quantstats_lumi.utils.to_prices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_prices</span></code></a></p></td>
+<td><p>Converts returns series to price data</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils.log_returns" title="quantstats_lumi.utils.log_returns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_returns</span></code></a></p></td>
+<td><p>Shorthand for to_log_returns</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils.to_log_returns" title="quantstats_lumi.utils.to_log_returns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_log_returns</span></code></a></p></td>
+<td><p>Converts returns series to log returns</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils.exponential_stdev" title="quantstats_lumi.utils.exponential_stdev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exponential_stdev</span></code></a></p></td>
+<td><p>Returns series representing exponential volatility of returns</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils.rebase" title="quantstats_lumi.utils.rebase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rebase</span></code></a></p></td>
+<td><p>Rebase all series to a given intial base.
+This makes comparing/plotting different series together easier.
+Args:
+* prices: Expects a price series/dataframe
+* base (number): starting value for all series.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils.group_returns" title="quantstats_lumi.utils.group_returns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">group_returns</span></code></a></p></td>
+<td><p>Summarize returns
+group_returns(df, df.index.year)
+group_returns(df, [df.index.year, df.index.month])</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils.aggregate_returns" title="quantstats_lumi.utils.aggregate_returns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aggregate_returns</span></code></a></p></td>
+<td><p>Aggregates returns based on date periods</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils.to_excess_returns" title="quantstats_lumi.utils.to_excess_returns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_excess_returns</span></code></a></p></td>
+<td><p>Calculates excess returns by subtracting
+risk-free returns from total returns</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils._prepare_prices" title="quantstats_lumi.utils._prepare_prices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_prepare_prices</span></code></a></p></td>
+<td><p>Converts return data into prices + cleanup</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils._prepare_returns" title="quantstats_lumi.utils._prepare_returns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_prepare_returns</span></code></a></p></td>
+<td><p>Converts price data into returns + cleanup</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils.download_returns" title="quantstats_lumi.utils.download_returns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">download_returns</span></code></a></p></td>
+<td><p>Download historical returns</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils._prepare_benchmark" title="quantstats_lumi.utils._prepare_benchmark"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_prepare_benchmark</span></code></a></p></td>
+<td><p>Fetch benchmark if ticker is provided, and pass through
+_prepare_returns()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils._round_to_closest" title="quantstats_lumi.utils._round_to_closest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_round_to_closest</span></code></a></p></td>
+<td><p>Round to closest resolution</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils._file_stream" title="quantstats_lumi.utils._file_stream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_file_stream</span></code></a></p></td>
+<td><p>Returns a file stream</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils._in_notebook" title="quantstats_lumi.utils._in_notebook"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_in_notebook</span></code></a></p></td>
+<td><p>Identify enviroment (notebook, terminal, etc)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils._count_consecutive" title="quantstats_lumi.utils._count_consecutive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_count_consecutive</span></code></a></p></td>
+<td><p>Counts consecutive data (like cumsum() with reset on zeroes)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils._score_str" title="quantstats_lumi.utils._score_str"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_score_str</span></code></a></p></td>
+<td><p>Returns + sign for positive values (used in plots)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils.make_index" title="quantstats_lumi.utils.make_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_index</span></code></a></p></td>
+<td><p>Construct portfolio index from ticker weights with rebalancing</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#quantstats_lumi.utils.make_portfolio" title="quantstats_lumi.utils.make_portfolio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_portfolio</span></code></a></p></td>
+<td><p>Calculates compounded value of portfolio</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#quantstats_lumi.utils._flatten_dataframe" title="quantstats_lumi.utils._flatten_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_flatten_dataframe</span></code></a></p></td>
+<td><p>Dirty method for flattening multi-index dataframe</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="api">
+<h3>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._mtd">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_mtd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._mtd" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._qtd">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_qtd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._qtd" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._ytd">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_ytd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._ytd" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._pandas_date">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_pandas_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._pandas_date" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._pandas_current_month">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_pandas_current_month</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._pandas_current_month" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.multi_shift">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">multi_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.multi_shift" title="Link to this definition">#</a></dt>
+<dd><p>Get last N rows relative to another row in pandas</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.to_returns">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">to_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.to_returns" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the simple arithmetic returns of a price series</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.to_prices">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">to_prices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.to_prices" title="Link to this definition">#</a></dt>
+<dd><p>Converts returns series to price data</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.log_returns">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">log_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nperiods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.log_returns" title="Link to this definition">#</a></dt>
+<dd><p>Shorthand for to_log_returns</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.to_log_returns">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">to_log_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nperiods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.to_log_returns" title="Link to this definition">#</a></dt>
+<dd><p>Converts returns series to log returns</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.exponential_stdev">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">exponential_stdev</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_halflife</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.exponential_stdev" title="Link to this definition">#</a></dt>
+<dd><p>Returns series representing exponential volatility of returns</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.rebase">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">rebase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.rebase" title="Link to this definition">#</a></dt>
+<dd><p>Rebase all series to a given intial base.
+This makes comparing/plotting different series together easier.
+Args:
+* prices: Expects a price series/dataframe
+* base (number): starting value for all series.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.group_returns">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">group_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groupby</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.group_returns" title="Link to this definition">#</a></dt>
+<dd><p>Summarize returns
+group_returns(df, df.index.year)
+group_returns(df, [df.index.year, df.index.month])</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.aggregate_returns">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">aggregate_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compounded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.aggregate_returns" title="Link to this definition">#</a></dt>
+<dd><p>Aggregates returns based on date periods</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.to_excess_returns">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">to_excess_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nperiods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.to_excess_returns" title="Link to this definition">#</a></dt>
+<dd><p>Calculates excess returns by subtracting
+risk-free returns from total returns</p>
+<p>Args:
+* returns (Series, DataFrame): Returns
+* rf (float, Series, DataFrame): Risk-Free rate(s)
+* nperiods (int): Optional. If provided, will convert rf to different
+frequency using deannualize
+Returns:
+* excess_returns (Series, DataFrame): Returns - rf</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._prepare_prices">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_prepare_prices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._prepare_prices" title="Link to this definition">#</a></dt>
+<dd><p>Converts return data into prices + cleanup</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._prepare_returns">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_prepare_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nperiods</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._prepare_returns" title="Link to this definition">#</a></dt>
+<dd><p>Converts price data into returns + cleanup</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.download_returns">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">download_returns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'max'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1d'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.download_returns" title="Link to this definition">#</a></dt>
+<dd><p>Download historical returns</p>
+<h2 class="rubric" id="id3">Parameters</h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ticker</span></code> (str): Financial instrument ticker</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">period</span></code> (str, default=“max”): Data period</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (str, optional): Data interval: 1m,2m,5m,15m,30m,60m,90m,1h,1d,5d,1wk,1mo,3mo
+**kwargs
+Additional arguments passed to yfinance.Ticker.history()</p></li>
+</ul>
+<h2 class="rubric" id="id4">Returns</h2>
+<p>pd.Series: Daily returns series (percentage change of Close prices)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._prepare_benchmark">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_prepare_benchmark</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">benchmark</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'max'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepare_returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._prepare_benchmark" title="Link to this definition">#</a></dt>
+<dd><p>Fetch benchmark if ticker is provided, and pass through
+_prepare_returns()</p>
+<p>period can be options or (expected) _pd.DatetimeIndex range</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._round_to_closest">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_round_to_closest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._round_to_closest" title="Link to this definition">#</a></dt>
+<dd><p>Round to closest resolution</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._file_stream">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_file_stream</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._file_stream" title="Link to this definition">#</a></dt>
+<dd><p>Returns a file stream</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._in_notebook">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_in_notebook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matplotlib_inline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._in_notebook" title="Link to this definition">#</a></dt>
+<dd><p>Identify enviroment (notebook, terminal, etc)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._count_consecutive">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_count_consecutive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._count_consecutive" title="Link to this definition">#</a></dt>
+<dd><p>Counts consecutive data (like cumsum() with reset on zeroes)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._score_str">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_score_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._score_str" title="Link to this definition">#</a></dt>
+<dd><p>Returns + sign for positive values (used in plots)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.make_index">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">make_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticker_weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rebalance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'1M'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'max'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">match_dates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.make_index" title="Link to this definition">#</a></dt>
+<dd><p>Construct portfolio index from ticker weights with rebalancing</p>
+<h2 class="rubric" id="id5">Parameters</h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ticker_weights</span></code> (dict): Dictionary of {ticker: weight} pairs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rebalance</span></code> (str, default=“1M”): Rebalancing frequency (pandas resample rule)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">period</span></code> (str, default=“max”): Historical period to download returns for</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">returns</span></code> (pd.Series/DataFrame, optional): Pre-downloaded returns data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match_dates</span></code> (bool, default=False): Align index dates with components</p></li>
+</ul>
+<h2 class="rubric" id="id6">Returns</h2>
+<p>pd.Series/DataFrame: Index returns series or dataframe</p>
+<h2 class="rubric" id="id7">Examples</h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">portfolio</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;SPY&#39;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span> <span class="s1">&#39;TLT&#39;</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">}</span>
+<span class="n">index_returns</span> <span class="o">=</span> <span class="n">qs</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">make_index</span><span class="p">(</span><span class="n">portfolio</span><span class="p">,</span> <span class="n">rebalance</span><span class="o">=</span><span class="s1">&#39;Q&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<h2 class="rubric" id="id8">Notes</h2>
+<ul class="simple">
+<li><p>Automatically downloads missing returns using yfinance</p></li>
+<li><p>Supports multiple rebalancing strategies via pandas resample rules</p></li>
+<li><p>When returns are provided, uses existing data instead of downloading</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils.make_portfolio">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">make_portfolio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_balance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'comp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">round_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils.make_portfolio" title="Link to this definition">#</a></dt>
+<dd><p>Calculates compounded value of portfolio</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="quantstats_lumi.utils._flatten_dataframe">
+<span class="sig-prename descclassname"><span class="pre">quantstats_lumi.utils.</span></span><span class="sig-name descname"><span class="pre">_flatten_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#quantstats_lumi.utils._flatten_dataframe" title="Link to this definition">#</a></dt>
+<dd><p>Dirty method for flattening multi-index dataframe</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="quantstats_lumi.plots.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.plots</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="quantstats_lumi.stats.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">quantstats_lumi.stats</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#api">API</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._mtd"><code class="docutils literal notranslate"><span class="pre">_mtd()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._qtd"><code class="docutils literal notranslate"><span class="pre">_qtd()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._ytd"><code class="docutils literal notranslate"><span class="pre">_ytd()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._pandas_date"><code class="docutils literal notranslate"><span class="pre">_pandas_date()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._pandas_current_month"><code class="docutils literal notranslate"><span class="pre">_pandas_current_month()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.multi_shift"><code class="docutils literal notranslate"><span class="pre">multi_shift()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.to_returns"><code class="docutils literal notranslate"><span class="pre">to_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.to_prices"><code class="docutils literal notranslate"><span class="pre">to_prices()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.log_returns"><code class="docutils literal notranslate"><span class="pre">log_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.to_log_returns"><code class="docutils literal notranslate"><span class="pre">to_log_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.exponential_stdev"><code class="docutils literal notranslate"><span class="pre">exponential_stdev()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.rebase"><code class="docutils literal notranslate"><span class="pre">rebase()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.group_returns"><code class="docutils literal notranslate"><span class="pre">group_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.aggregate_returns"><code class="docutils literal notranslate"><span class="pre">aggregate_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.to_excess_returns"><code class="docutils literal notranslate"><span class="pre">to_excess_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._prepare_prices"><code class="docutils literal notranslate"><span class="pre">_prepare_prices()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._prepare_returns"><code class="docutils literal notranslate"><span class="pre">_prepare_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.download_returns"><code class="docutils literal notranslate"><span class="pre">download_returns()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._prepare_benchmark"><code class="docutils literal notranslate"><span class="pre">_prepare_benchmark()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._round_to_closest"><code class="docutils literal notranslate"><span class="pre">_round_to_closest()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._file_stream"><code class="docutils literal notranslate"><span class="pre">_file_stream()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._in_notebook"><code class="docutils literal notranslate"><span class="pre">_in_notebook()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._count_consecutive"><code class="docutils literal notranslate"><span class="pre">_count_consecutive()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._score_str"><code class="docutils literal notranslate"><span class="pre">_score_str()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.make_index"><code class="docutils literal notranslate"><span class="pre">make_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils.make_portfolio"><code class="docutils literal notranslate"><span class="pre">make_portfolio()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantstats_lumi.utils._flatten_dataframe"><code class="docutils literal notranslate"><span class="pre">_flatten_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
