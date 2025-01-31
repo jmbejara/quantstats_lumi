@@ -79,41 +79,47 @@ def html(
     show_match_volatility: bool = True,
     **kwargs,
 ):
-    """
-    Generates a full HTML tearsheet with performance metrics and plots
-
-    Parameters
-    ----------
-    returns : pd.Series, pd.DataFrame
-        Strategy returns
-    benchmark : pd.Series, optional
-        Benchmark returns
-    rf : float, optional
-        Risk-free rate, default is 0
-    grayscale : bool, optional
-        Plot in grayscale, default is False
-    title : str, optional
-        Title of the HTML report, default is "Strategy Tearsheet"
-    output : str, optional
-        Output file path
-    compounded : bool, optional
-        Whether to use compounded returns, default is True
-    periods_per_year : int, optional
-        Trading periods per year, default is 365
-    download_filename : str, optional
-        Download filename, default is "tearsheet.html"
-    figfmt : str, optional
-        Figure format, default is "svg"
-    template_path : str, optional
-        Custom template path
-    match_dates : bool, optional
-        Match dates of returns and benchmark, default is True
-    parameters : dict, optional
-        Strategy parameters
-
-    Returns
-    -------
-    None
+    """Generate comprehensive HTML performance report
+    
+    ## Parameters
+    
+    - `returns` (pd.Series): Strategy returns series (daily, non-cumulative)
+    - `benchmark` (pd.Series/str, optional): Benchmark returns or ticker symbol
+    - `rf` (float, default=0.0): Risk-free rate
+    - `grayscale` (bool, optional): Use grayscale color scheme for plots
+    - `title` (str, optional): Report title
+    - `output` (str, optional): Output file path
+    - `compounded` (bool, optional): Calculate compounded returns
+    - `periods_per_year` (int, optional): Trading periods per year
+    - `download_filename` (str, optional): Name for downloaded report
+    - `figfmt` (str, optional): Image format for plots
+    - `template_path` (str, optional): Custom template file path
+    - `match_dates` (bool, optional): Align return dates with benchmark
+    - `parameters` (dict, optional): Strategy parameters to display in report
+    - `log_scale` (bool, optional): Use logarithmic returns scale
+    - `show_match_volatility` (bool, optional): Show volatility-matched returns plot
+    - `**kwargs`: Additional report configuration options
+    
+    ## Returns
+    
+    str: HTML content of generated report
+    
+    ## Examples
+    
+    ```python
+    returns = qs.utils.download_returns('SPY')
+    qs.reports.html(returns, output="my_report.html")
+    ```
+    
+    ## Notes
+    
+    The HTML report includes:
+    - Key performance metrics table
+    - Interactive equity curve visualization
+    - Drawdown analysis
+    - Return distribution charts
+    - Rolling risk metrics
+    - Parameter attribution (if provided)
     """
 
     if output is None and not _utils._in_notebook():
@@ -597,7 +603,27 @@ def full(
     match_dates=True,
     **kwargs,
 ):
-    """calculates and plots full performance metrics"""
+    """Generate comprehensive performance metrics report
+    
+    ## Parameters
+    
+    - `returns` (pd.Series): Strategy returns (daily, non-cumulative)
+    - `benchmark` (pd.Series/str, optional): Benchmark returns or ticker
+    - `rf` (float, default=0.0): Risk-free rate
+    - `display` (bool, default=True): Show report immediately
+    - `periods_per_year` (int, default=365): Trading periods per year
+    - `**kwargs`: Additional metrics configuration
+    
+    ## Returns
+    
+    pd.DataFrame: Full metrics table
+    
+    ## Example
+    
+    ```python
+    metrics_df = qs.reports.full(returns, "SPY")
+    ```
+    """
 
     # prepare timeseries
     if match_dates:
@@ -750,7 +776,27 @@ def basic(
     match_dates=True,
     **kwargs,
 ):
-    """calculates and plots basic performance metrics"""
+    """Generate basic performance summary (metrics + plots)
+    
+    ## Parameters
+    
+    - `returns` (pd.Series): Strategy returns series
+    - `benchmark` (pd.Series/str, optional): Comparison benchmark
+    - `rf` (float, default=0.0): Risk-free rate
+    - `figsize` (tuple, default=(8,5)): Chart dimensions
+    - `display` (bool, default=True): Show output immediately
+    - `**kwargs`: Additional plot configuration
+    
+    ## Returns
+    
+    tuple: (metrics DataFrame, plots dictionary)
+    
+    ## Example
+    
+    ```python
+    metrics, plots = qs.reports.basic(returns)
+    ```
+    """
 
     # prepare timeseries
     if match_dates:
@@ -860,7 +906,38 @@ def metrics(
     match_dates=True,
     **kwargs,
 ):
-    """calculates and displays various performance metrics"""
+    """Generate performance metrics table
+    
+    ## Parameters
+    
+    - `returns` (pd.Series): Strategy returns (daily, non-cumulative)
+    - `benchmark` (pd.Series/str, optional): Benchmark returns or ticker to download
+    - `rf` (float, default=0.0): Risk-free rate
+    - `display` (bool, default=True): Display metrics table
+    - `mode` (str, default="basic"): Report mode ('basic' or 'full')
+    - `sep` (bool, default=False): Separate strategy/benchmark metrics
+    - `compounded` (bool, default=True): Use compounded returns
+    - `periods_per_year` (int, default=365): Trading periods per year
+    - `prepare_returns` (bool, default=True): Clean and format returns
+    - `match_dates` (bool, default=True): Align dates with benchmark
+    - `**kwargs`: Additional arguments for stats functions
+    
+    ## Returns
+    
+    pd.DataFrame: Table of performance metrics
+    
+    ## Examples
+    
+    ```python
+    returns = qs.utils.download_returns('SPY')
+    qs.reports.metrics(returns, mode='full')
+    ```
+    
+    ## See Also
+    
+    - [plots](#quantstats_lumi.reports.plots): Performance visualization functions
+    - [html](#quantstats_lumi.reports.html): Comprehensive HTML report generator
+    """
 
     if match_dates:
         returns = returns.dropna()
@@ -1358,7 +1435,37 @@ def plots(
     match_dates=True,
     **kwargs,
 ):
-    """Plots for strategy performance"""
+    """Generate performance visualization plots
+    
+    ## Parameters
+    
+    - `returns` (pd.Series): Strategy returns (daily, non-cumulative)
+    - `benchmark` (pd.Series/str, optional): Benchmark returns or ticker
+    - `grayscale` (bool, default=False): Use grayscale theme
+    - `figsize` (tuple, default=(8,5)): Figure dimensions
+    - `mode` (str, default="basic"): Plot detail level ('basic' or 'full')
+    - `compounded` (bool, default=True): Use compounded returns
+    - `periods_per_year` (int, default=365): Trading periods per year
+    - `prepare_returns` (bool, default=True): Clean and format returns
+    - `match_dates` (bool, default=True): Align dates with benchmark
+    - `**kwargs`: Additional plot configuration options
+    
+    ## Returns
+    
+    dict: Dictionary of matplotlib figure objects
+    
+    ## Examples
+    
+    ```python
+    returns = qs.utils.download_returns('SPY')
+    figs = qs.reports.plots(returns, mode='full')
+    ```
+    
+    ## See Also
+    
+    - [metrics](#quantstats_lumi.reports.metrics): Performance metrics calculation
+    - [basic](#quantstats_lumi.reports.basic): Combined metrics and plots report
+    """
 
     benchmark_colname = kwargs.get("benchmark_title", "Benchmark")
     strategy_colname = kwargs.get("strategy_title", "Strategy")
@@ -1705,7 +1812,17 @@ def _calc_dd(df, display=True, as_pct=False):
 
 
 def _html_table(obj, showindex="default"):
-    """Returns HTML table"""
+    """Convert pandas object to styled HTML table
+    
+    ## Parameters
+    
+    - `obj` (pd.DataFrame/pd.Series): Data to convert
+    - `showindex` (str/bool): Whether to show row indices
+    
+    ## Returns
+    
+    str: Formatted HTML table string
+    """
     obj = _tabulate(
         obj, headers="keys", tablefmt="html", floatfmt=".2f", showindex=showindex
     )
@@ -1720,7 +1837,13 @@ def _html_table(obj, showindex="default"):
 
 
 def _download_html(html, filename="quantstats-tearsheet.html"):
-    """Downloads HTML report"""
+    """Trigger browser download of HTML report
+    
+    ## Parameters
+    
+    - `html` (str): HTML content to download
+    - `filename` (str, default="quantstats-tearsheet.html"): Download filename
+    """
     jscode = _regex.sub(
         " +",
         " ",
@@ -1739,7 +1862,12 @@ def _download_html(html, filename="quantstats-tearsheet.html"):
 
 
 def _open_html(html):
-    """Opens HTML in a new tab"""
+    """Open HTML content in new browser tab
+    
+    ## Parameters
+    
+    - `html` (str): HTML content to display
+    """
     jscode = _regex.sub(
         " +",
         " ",
@@ -1753,7 +1881,17 @@ def _open_html(html):
 
 
 def _embed_figure(figfiles, figfmt):
-    """Embeds the figure bytes in the html output"""
+    """Embed matplotlib figures as base64 in HTML
+    
+    ## Parameters
+    
+    - `figfiles` (list/io.BytesIO): Figure bytes data
+    - `figfmt` (str): Image format (svg/png)
+    
+    ## Returns
+    
+    str: HTML img tags with embedded images
+    """
     if isinstance(figfiles, list):
         embed_string = "\n"
         for figfile in figfiles:

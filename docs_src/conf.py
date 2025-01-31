@@ -33,22 +33,16 @@ external_toc_exclude_missing = True
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    # "myst_parser",
     "autodoc2",
     "sphinx.ext.intersphinx",
-    # "numpydoc",
     "myst_nb",
-    # "ablog",
     "sphinx_design",
     "sphinx_copybutton",
-    # "sphinxext.opengraph",
-    # "sphinxext.rediraffe",
 ]
 
 ## Use autodoc2 to generate documentation from the source code
 # Here are some reasons why: https://sphinx-autodoc2.readthedocs.io/en/latest/autodoc_diff.html
 autodoc2_packages = [
-    # "../src",
     "../quantstats_lumi/",
 ]
 # Use MyST by default for all docstrings
@@ -102,7 +96,7 @@ exclude_patterns = [
 ## For including date and time in MyST
 # https://myst-parser.readthedocs.io/en/latest/syntax/roles-and-directives.html#insert-the-date-and-reading-time
 # today_fmt = '%b %d, %Y'
-today_fmt = "%c"  # Locale’s appropriate date and time representation.
+today_fmt = "%c"  # Locale's appropriate date and time representation.
 
 
 # -- Options for HTML output -------------------------------------------------

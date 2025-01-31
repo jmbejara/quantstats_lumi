@@ -29,6 +29,20 @@ from scipy.stats import norm as _norm
 
 from . import utils as _utils
 
+"""
+Performance Metrics Calculation Module
+
+This module provides functions for calculating various quantitative finance metrics including:
+- Risk-adjusted returns (Sharpe, Sortino, Omega ratios)
+- Drawdown analysis
+- Volatility measurements
+- Risk metrics (VaR, CVaR)
+- Performance ratios (Calmar, Information Ratio)
+- Benchmark comparisons
+
+The module is designed to work with pandas Series/DataFrames containing returns data.
+"""
+
 # ======== STATS ========
 
 
@@ -285,18 +299,36 @@ def autocorr_penalty(returns, prepare_returns=False):
 
 
 def sharpe(returns, rf=0.0, periods=365, annualize=True, smart=False):
-    """
-    Calculates the sharpe ratio of access returns
-
-    If rf is non-zero, you must specify periods.
-    In this case, rf is assumed to be expressed in yearly (annualized) terms
-
-    Args:
-        * returns (Series, DataFrame): Input return series
-        * rf (float): Risk-free rate expressed as a yearly (annualized) return
-        * periods (int): Freq. of returns
-        * annualize: return annualize sharpe?
-        * smart: return smart sharpe ratio
+    """Calculate risk-adjusted return ratio
+    
+    ## Parameters
+    
+    - `returns` (pd.Series/DataFrame): Input return series
+    - `rf` (float, default=0.0): Annualized risk-free rate
+    - `periods` (int, default=365): Number of periods per year
+    - `annualize` (bool, default=True): Annualize the ratio
+    - `smart` (bool, default=False): Apply autocorrelation penalty
+    
+    ## Returns
+    
+    float/pd.Series/pd.DataFrame: Sharpe ratio value(s)
+    
+    ## Examples
+    
+    ```python
+    # Basic Sharpe ratio
+    sharpe_ratio = qs.stats.sharpe(returns)
+    
+    # Smart Sharpe with 2% risk-free rate
+    smart_sharpe = qs.stats.sharpe(returns, rf=0.02, smart=True)
+    ```
+    
+    ## Notes
+    
+    - Requires `periods` when rf > 0
+    - Annualization uses √periods scaling
+    - Smart Sharpe adjusts for return autocorrelation
+    - Supports both single strategy and multi-column DataFrames
     """
     if rf != 0 and periods is None:
         raise Exception("Must provide periods if rf != 0")

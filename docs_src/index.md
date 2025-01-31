@@ -112,17 +112,17 @@ qs.plots.snapshot(stock, title='Facebook Performance', show=True)
 
 ### Creating a report
 
-You can create 7 different report tearsheets:
+You can create 5 different report tearsheets:
 
-1. `qs.reports.metrics(mode='basic|full", ...)` - shows basic/full metrics
-2. `qs.reports.plots(mode='basic|full", ...)` - shows basic/full plots
-3. `qs.reports.basic(...)` - shows basic metrics and plots
-4. `qs.reports.full(...)` - shows full metrics and plots
-5. `qs.reports.html(...)` - generates a complete report as html
+1. [`qs.reports.metrics`](./apidocs/quantstats_lumi/quantstats_lumi.reports.md#quantstats_lumi.reports.metrics) - shows basic/full metrics
+2. [`qs.reports.plots`](./apidocs/quantstats_lumi/quantstats_lumi.reports.md#quantstats_lumi.reports.plots) - shows basic/full plots  
+3. [`qs.reports.basic`](./apidocs/quantstats_lumi/quantstats_lumi.reports.md#quantstats_lumi.reports.basic) - shows basic metrics and plots
+4. [`qs.reports.full`](./apidocs/quantstats_lumi/quantstats_lumi.reports.md#quantstats_lumi.reports.full) - shows full metrics and plots
+5. [`qs.reports.html`](./apidocs/quantstats_lumi/quantstats_lumi.reports.md#quantstats_lumi.reports.html) - generates complete HTML report
 
 ```python
-# benchmark can be a pandas Series or ticker
-qs.reports.html(stock, "SPY")
+# Generate HTML report with benchmark comparison
+qs.reports.html(stock, "SPY", title="Facebook vs S&P 500")
 ```
 
 ```{image} https://github.com/ranaroussi/quantstats/blob/main/docs/report.jpg?raw=true

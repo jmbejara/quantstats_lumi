@@ -33,8 +33,29 @@ utils._in_notebook(matplotlib_inline=True)
 
 def extend_pandas():
     """
-    Extends pandas by exposing methods to be used like:
-    df.sharpe(), df.best('day'), ...
+    Extend pandas objects with QuantStats functionality
+    
+    Adds 3 categories of methods to pandas Series/DataFrames:
+    
+    1. Statistics methods (sharpe, max_drawdown, etc)
+    2. Plotting methods (plot_snapshot, plot_returns, etc) 
+    3. Reporting methods (html_report, metrics, etc)
+    
+    Examples
+    --------
+    >>> import quantstats_lumi as qs
+    >>> qs.extend_pandas()
+    >>> returns = qs.utils.download_returns('SPY')
+    >>> returns.sharpe()
+    0.8135304438803402
+    >>> returns.plot_snapshot()
+    
+    Notes
+    -----
+    Full list of added methods:
+    - Statistics: sharpe, sortino, volatility, max_drawdown, etc
+    - Plotting: plot_snapshot, plot_drawdowns, plot_histogram
+    - Reporting: html_report, metrics
     """
     from pandas.core.base import PandasObject as _po
 

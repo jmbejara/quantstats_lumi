@@ -66,6 +66,42 @@ def snapshot(
     log_scale=False,
     **kwargs,
 ):
+    """Generate comprehensive portfolio performance visualization
+    
+    ## Parameters
+    
+    - `returns` (pd.Series/DataFrame): Strategy returns series
+    - `grayscale` (bool, default=False): Use grayscale theme
+    - `figsize` (tuple, default=(10,8)): Figure dimensions
+    - `title` (str, default="Portfolio Summary"): Chart title
+    - `fontname` (str, default="Arial"): Base font family
+    - `lw` (float, default=1.5): Line width for equity curve
+    - `mode` (str, default="comp"): Return calculation mode
+    - `subtitle` (bool, default=True): Show date range subtitle
+    - `savefig` (str/dict, optional): Save path/config
+    - `show` (bool, default=True): Immediately display plot
+    - `log_scale` (bool, default=False): Use logarithmic Y-axis
+    - `**kwargs`: Additional matplotlib configuration
+    
+    ## Returns
+    
+    matplotlib.figure.Figure: Generated figure object
+    
+    ## Notes
+    
+    Creates 3-panel visualization showing:
+    - Cumulative returns trajectory
+    - Drawdown progression
+    - Daily return distribution
+    
+    ## Example
+    
+    ```python
+    returns = qs.utils.download_returns('SPY')
+    fig = qs.plots.snapshot(returns, title='SPY Performance', log_scale=True)
+    fig.savefig('performance.png')
+    ```
+    """
     strategy_colname = kwargs.get("strategy_col", "Strategy")
 
     multi_column = False

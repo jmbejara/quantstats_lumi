@@ -232,10 +232,24 @@ def _prepare_returns(data, rf=0.0, nperiods=None):
     return data
 
 
-def download_returns(ticker, period="max", proxy=None):
+def download_returns(ticker, period="max", interval="1d", **kwargs):
+    """Download historical returns
+    
+    ## Parameters
+    
+    - `ticker` (str): Financial instrument ticker
+    - `period` (str, default="max"): Data period
+    - `interval` (str, optional): Data interval: 1m,2m,5m,15m,30m,60m,90m,1h,1d,5d,1wk,1mo,3mo
+    **kwargs
+        Additional arguments passed to yfinance.Ticker.history()
+
+    ## Returns
+    
+    pd.Series: Daily returns series (percentage change of Close prices)
+    """
     params = {
         "tickers": ticker,
-        "proxy": proxy,
+        "proxy": kwargs.get("proxy"),
     }
     if isinstance(period, _pd.DatetimeIndex):
         params["start"] = period[0]
@@ -331,22 +345,32 @@ def _score_str(val):
 def make_index(
     ticker_weights, rebalance="1M", period="max", returns=None, match_dates=False
 ):
-    """
-    Makes an index out of the given tickers and weights.
-    Optionally you can pass a dataframe with the returns.
-    If returns is not given it try to download them with yfinance
-
-    Args:
-        * ticker_weights (Dict): A python dict with tickers as keys
-            and weights as values
-        * rebalance: Pandas resample interval or None for never
-        * period: time period of the returns to be downloaded
-        * returns (Series, DataFrame): Optional. Returns If provided,
-            it will fist check if returns for the given ticker are in
-            this dataframe, if not it will try to download them with
-            yfinance
-    Returns:
-        * index_returns (Series, DataFrame): Returns for the index
+    """Construct portfolio index from ticker weights with rebalancing
+    
+    ## Parameters
+    
+    - `ticker_weights` (dict): Dictionary of {ticker: weight} pairs
+    - `rebalance` (str, default="1M"): Rebalancing frequency (pandas resample rule)
+    - `period` (str, default="max"): Historical period to download returns for
+    - `returns` (pd.Series/DataFrame, optional): Pre-downloaded returns data
+    - `match_dates` (bool, default=False): Align index dates with components
+    
+    ## Returns
+    
+    pd.Series/DataFrame: Index returns series or dataframe
+    
+    ## Examples
+    
+    ```python
+    portfolio = {'SPY': 0.6, 'TLT': 0.4}
+    index_returns = qs.utils.make_index(portfolio, rebalance='Q')
+    ```
+    
+    ## Notes
+    
+    - Automatically downloads missing returns using yfinance
+    - Supports multiple rebalancing strategies via pandas resample rules
+    - When returns are provided, uses existing data instead of downloading
     """
     # Declare a returns variable
     index = None
