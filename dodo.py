@@ -48,3 +48,20 @@ def task_compile_sphinx_docs():
         ],
         "clean": True,
     }
+
+def task_copy_docs():
+    """Copy docs to the docs folder"""
+
+    return {
+        "actions": [
+            "cp -r ./_docs/_build/html/ ./docs",
+            "touch ./docs/.nojekyll"
+            ],
+        "targets": [
+            "./docs/index.html",
+        ],
+        "file_dep": [
+            "./_docs/_build/html/index.html",
+        ],
+        "clean": True,
+    }
