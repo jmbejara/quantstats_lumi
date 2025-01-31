@@ -17,3 +17,8 @@ Icon
 QuantStats_Lumi.egg-info/*
 test_tearsheet.html
 test_tearsheet_parameters.html
+
+_docs/*
+.doit.db.db
+docs_src/apidocs/*
+.DS_Store

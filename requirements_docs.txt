@@ -1,0 +1,5 @@
+sphinx-autodoc2
+sphinx
+myst-nb
+sphinx-design
+sphinx-copybutton
